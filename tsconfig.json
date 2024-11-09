@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": ["dom", "ESNext"],
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "target": "esnext",
+        "outDir": "dist",
+        "rootDir": "src",
+        "sourceMap": true,
+        "importHelpers": true
+    },
+
+    "exclude": [
+        "dist",
+        "test",
+        "node_modules"
+    ],
+
+    "compileOnSave": false
+}
