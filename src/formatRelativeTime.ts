@@ -1,4 +1,4 @@
-import {DateTimezone, Timestamp} from "@co.mmons/js-utils/core";
+import {DateTimezone, Timestamp} from "@appspltfrm/js-utils/core";
 import {bestRelativeTimeFormatValue} from "./bestRelativeTimeFormatValue";
 import {defineGlobals} from "./defineGlobals";
 import {IntlContext} from "./IntlContext";

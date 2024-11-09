@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CountryStringSerializer = void 0;
-const json_1 = require("@co.mmons/js-utils/json");
+const json_1 = require("@appspltfrm/js-utils/json");
 const Country_1 = require("./Country");
 class CountryStringSerializer extends json_1.Serializer {
     unserialize(json, options) {

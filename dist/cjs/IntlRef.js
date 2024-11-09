@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IntlRef = void 0;
 const tslib_1 = require("tslib");
-const json_1 = require("@co.mmons/js-utils/json");
+const json_1 = require("@appspltfrm/js-utils/json");
 let IntlRef = class IntlRef {
     constructor(type) {
         this.refType = type;

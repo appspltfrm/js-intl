@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatRelativeTime = formatRelativeTime;
-const core_1 = require("@co.mmons/js-utils/core");
+const core_1 = require("@appspltfrm/js-utils/core");
 const bestRelativeTimeFormatValue_1 = require("./bestRelativeTimeFormatValue");
 const defineGlobals_1 = require("./defineGlobals");
 const IntlContext_1 = require("./IntlContext");

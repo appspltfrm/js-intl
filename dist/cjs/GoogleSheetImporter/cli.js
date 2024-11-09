@@ -2,9 +2,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const yargs = tslib_1.__importStar(require("yargs"));
+const yargs_1 = tslib_1.__importDefault(require("yargs"));
 const GoogleSheetImporter_1 = require("./GoogleSheetImporter");
-const argv = yargs
+const argv = (0, yargs_1.default)()
     .option("outputPath", { description: "Output directory path", type: "string" })
     .option("outputType", { description: "Output type", choices: ["json", "ts"], type: "string" })
     .option("defaultLocale", { description: "Default locale to use, when no translation for some other locale", "type": "string" })

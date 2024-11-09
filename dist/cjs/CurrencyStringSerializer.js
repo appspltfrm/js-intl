@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CurrencyStringSerializer = void 0;
-const json_1 = require("@co.mmons/js-utils/json");
+const json_1 = require("@appspltfrm/js-utils/json");
 const Currency_1 = require("./Currency");
 class CurrencyStringSerializer extends json_1.Serializer {
     unserialize(json, options) {

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatMessage = formatMessage;
 const tslib_1 = require("tslib");
-const core_1 = require("@co.mmons/js-utils/core");
+const core_1 = require("@appspltfrm/js-utils/core");
 const intl_messageformat_1 = tslib_1.__importDefault(require("intl-messageformat"));
 const IntlContext_1 = require("./IntlContext");
 function formatMessage() {

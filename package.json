@@ -5,23 +5,22 @@
   "private": false,
   "scripts": {
     "build": "node-utils-file-system-glob-delete \"dist/**/*\" && npm run build:cjs && npm run build:esm",
-    "build:cjs": "tsc --module commonjs --declaration false --target esnext --moduleResolution node --outDir dist/cjs",
-    "build:esm": "tsc --module esnext --taget esnext --moduleResolution bundler --outDir dist/",
+    "build:cjs": "tsc --module nodenext --target esnext --moduleResolution nodenext --outDir dist/cjs --declaration false",
+    "build:esm": "tsc --module esnext --target esnext --moduleResolution bundler --outDir dist/",
     "messages": "npx ts-node src/GoogleSheetImporter/cli.ts --output-path messages --output-type json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
   },
   "bin": {
-    "js-intl-google-sheet-importer": "dist/cjs/GoogleSheetImporter/cli.js"
+    "js-intl-google-sheet-importer": "./dist/cjs/GoogleSheetImporter/cli.js"
   },
   "dependencies": {
+    "@appspltfrm/js-utils": "github:appspltfrm/js-utils",
     "@appspltfrm/node-utils": "github:appspltfrm/node-utils",
     "@fast-csv/parse": "^5.0.0",
     "@formatjs/icu-messageformat-parser": "^2.9.0",
-    "date-fns": "^4.0.0",
     "fs-extra": "^11.0.0",
     "yargs": "^17.0.0"
   },
   "peerDependencies": {
-    "@co.mmons/js-utils": "github:co-mmons/js-utils",
     "@formatjs/intl-relativetimeformat": "^11.0.0",
     "bignumber.js": "^9.0.0",
     "tslib": "^2.8.0"
@@ -37,14 +36,14 @@
   },
   "exports": {
     ".": {
-      "types": "dist/index.d.ts",
-      "import": "dist/index.js",
-      "require": "dist/cjs/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js"
     },
     "./*": {
-      "types": "dist/*/index.d.ts",
-      "import": "dist/*/index.js",
-      "require": "dist/cjs/*/index.js"
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js",
+      "require": "./dist/cjs/*/index.js"
     }
   },
   "intlBundleItems": [
@@ -55,13 +54,13 @@
     {
       "type": "message",
       "path": "{{NODE_MODULES}}/@umpirsky/country-list/data/{{LOCALE}}/country.json",
-      "module": "@co.mmons/js-intl/country",
+      "module": "@appspltfrm/js-intl/country",
       "namespace": "@umpirsky/country-list"
     },
     {
       "type": "message",
       "path": "{{NODE_MODULES}}/@umpirsky/locale-list/data/{{LOCALE}}/country.json",
-      "module": "@co.mmons/js-intl/locale",
+      "module": "@appspltfrm/js-intl/locale",
       "namespace": "@umpirsky/locale-list"
     }
   ]

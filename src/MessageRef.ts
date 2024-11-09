@@ -1,4 +1,4 @@
-import {serialize, subtype} from "@co.mmons/js-utils/json";
+import {serialize, subtype} from "@appspltfrm/js-utils/json";
 import {IntlRef} from "./IntlRef";
 
 @subtype(IntlRef, "refType", "message")
@@ -30,7 +30,7 @@ export class MessageRef extends IntlRef {
             return new MessageRef((typeof json.namespace === "string" && json.namespace) || undefined, json.key, typeof json.values === "object" ? json.values : undefined, json.formats);
         }
 
-        throw new Error(`Cannot unserialize "${json}" as @co.mmons/js-intl/MessageRef`);
+        throw new Error(`Cannot unserialize "${json}" as @appspltfrm/js-intl/MessageRef`);
     }
 
     /**

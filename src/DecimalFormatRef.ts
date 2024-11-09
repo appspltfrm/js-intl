@@ -1,4 +1,4 @@
-import {subtype, serialize} from "@co.mmons/js-utils/json";
+import {subtype, serialize} from "@appspltfrm/js-utils/json";
 import {BigNumber} from "bignumber.js";
 import {IntlRef} from "./IntlRef";
 
@@ -17,7 +17,7 @@ export class DecimalFormatRef extends IntlRef {
             );
         }
 
-        throw new Error(`Cannot unserialize "${json}" as @co.mmons/js-intl/DecimalFormatRef`);
+        throw new Error(`Cannot unserialize "${json}" as @appspltfrm/js-intl/DecimalFormatRef`);
     }
 
     constructor(value: number | BigNumber, options?: Intl.NumberFormatOptions);

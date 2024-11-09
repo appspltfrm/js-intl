@@ -1,4 +1,4 @@
-import {subtype} from "@co.mmons/js-utils/json";
+import {subtype} from "@appspltfrm/js-utils/json";
 import {IntlRef} from "./IntlRef";
 
 @subtype(IntlRef, "refType", "message")
@@ -28,7 +28,7 @@ export class ValueRef extends IntlRef {
             return new ValueRef((typeof json.namespace === "string" && json.namespace) || undefined, json.key);
         }
 
-        throw new Error(`Cannot unserialize "${json}" as @co.mmons/js-intl/ValueRef`);
+        throw new Error(`Cannot unserialize "${json}" as @appspltfrm/js-intl/ValueRef`);
     }
 
     /**

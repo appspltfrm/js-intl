@@ -1,4 +1,4 @@
-import {HtmlString} from "@co.mmons/js-utils/core";
+import {HtmlString} from "@appspltfrm/js-utils/core";
 import IntlMessageFormat from "intl-messageformat";
 import {IntlContext} from "./IntlContext";
 

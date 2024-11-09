@@ -1,4 +1,4 @@
-import {ObjectAsMapSerializer, SerializationOptions, serialize, unserialize} from "@co.mmons/js-utils/json";
+import {ObjectAsMapSerializer, SerializationOptions, serialize, unserialize} from "@appspltfrm/js-utils/json";
 
 export class IntlStringsStoreSerializer extends ObjectAsMapSerializer {
 

@@ -32,10 +32,6 @@ class IntlHelper extends IntlContext_1.IntlContext {
         this.defaultNamespace$ = defaultNamespace;
         loadPolyfillsLocale();
     }
-    /**
-     * Path or url to a directory, where intl resources are stored.
-     */
-    resourcesLocation;
     setResourcesLocation(location) {
         this.resourcesLocation = location;
     }

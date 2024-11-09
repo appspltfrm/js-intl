@@ -3,7 +3,7 @@ var MessageRef_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MessageRef = void 0;
 const tslib_1 = require("tslib");
-const json_1 = require("@co.mmons/js-utils/json");
+const json_1 = require("@appspltfrm/js-utils/json");
 const IntlRef_1 = require("./IntlRef");
 let MessageRef = class MessageRef extends IntlRef_1.IntlRef {
     static { MessageRef_1 = this; }
@@ -30,7 +30,7 @@ let MessageRef = class MessageRef extends IntlRef_1.IntlRef {
         else if (typeof json === "object" && typeof json.key === "string" && json.key) {
             return new MessageRef_1((typeof json.namespace === "string" && json.namespace) || undefined, json.key, typeof json.values === "object" ? json.values : undefined, json.formats);
         }
-        throw new Error(`Cannot unserialize "${json}" as @co.mmons/js-intl/MessageRef`);
+        throw new Error(`Cannot unserialize "${json}" as @appspltfrm/js-intl/MessageRef`);
     }
     constructor(namespaceOrKey, keyOrValues, valuesOrFormats, formats) {
         super("message");

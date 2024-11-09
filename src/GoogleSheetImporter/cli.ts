@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import * as yargs from "yargs";
+import yargs from "yargs";
 
 import {GoogleSheetImporter} from "./GoogleSheetImporter";
 
-const argv = yargs
+const argv = yargs()
     .option("outputPath", {description: "Output directory path", type: "string"})
     .option("outputType", {description: "Output type", choices: ["json", "ts"], type: "string"})
     .option("defaultLocale", {description: "Default locale to use, when no translation for some other locale", "type": "string"})

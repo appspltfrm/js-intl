@@ -1,4 +1,4 @@
-import {SerializationOptions, Serializer} from "@co.mmons/js-utils/json";
+import {SerializationOptions, Serializer} from "@appspltfrm/js-utils/json";
 import {Country} from "./Country";
 
 export class CountryStringSerializer extends Serializer {

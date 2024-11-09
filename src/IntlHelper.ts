@@ -1,4 +1,4 @@
-import {DateTimezone, Timestamp, TimeZoneDate} from "@co.mmons/js-utils/core";
+import {DateTimezone, Timestamp, TimeZoneDate} from "@appspltfrm/js-utils/core";
 import {BigNumber} from "bignumber.js";
 import {CurrencyAndNumber} from "./CurrencyAndNumber";
 import {DecimalFormatRef} from "./DecimalFormatRef";

@@ -1,4 +1,4 @@
-import {DateTimezone, Timestamp, TimeZoneDate} from "@co.mmons/js-utils/core";
+import {DateTimezone, Timestamp, TimeZoneDate} from "@appspltfrm/js-utils/core";
 import {formatTimeOrDateOrDateTime} from "./formatTimeOrDateOrDateTime";
 import {IntlContext} from "./IntlContext";
 

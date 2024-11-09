@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatTimeOrDateOrDateTime = formatTimeOrDateOrDateTime;
-const core_1 = require("@co.mmons/js-utils/core");
+const core_1 = require("@appspltfrm/js-utils/core");
 function formatTimeOrDateOrDateTime(context, mode, dateTime, predefinedOptionsOrOptions, options) {
     let predefinedOptions = typeof predefinedOptionsOrOptions === "string" ? context.findPredefinedFormatOptions(predefinedOptionsOrOptions) : predefinedOptionsOrOptions;
     predefinedOptions = Object.assign({}, predefinedOptions, options);

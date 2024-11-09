@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IntlStringsStoreSerializer = void 0;
-const json_1 = require("@co.mmons/js-utils/json");
+const json_1 = require("@appspltfrm/js-utils/json");
 class IntlStringsStoreSerializer extends json_1.ObjectAsMapSerializer {
     allowPlainValue;
     constructor(allowPlainValue) {

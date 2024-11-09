@@ -1,4 +1,4 @@
-import {serializable} from "@co.mmons/js-utils/json";
+import {serializable} from "@appspltfrm/js-utils/json";
 
 type RefType = "value" | "message" | "decimalFormat";
 

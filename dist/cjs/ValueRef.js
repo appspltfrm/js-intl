@@ -3,7 +3,7 @@ var ValueRef_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ValueRef = void 0;
 const tslib_1 = require("tslib");
-const json_1 = require("@co.mmons/js-utils/json");
+const json_1 = require("@appspltfrm/js-utils/json");
 const IntlRef_1 = require("./IntlRef");
 let ValueRef = class ValueRef extends IntlRef_1.IntlRef {
     static { ValueRef_1 = this; }
@@ -28,7 +28,7 @@ let ValueRef = class ValueRef extends IntlRef_1.IntlRef {
         else if (typeof json === "object" && typeof json.key === "string" && json.key) {
             return new ValueRef_1((typeof json.namespace === "string" && json.namespace) || undefined, json.key);
         }
-        throw new Error(`Cannot unserialize "${json}" as @co.mmons/js-intl/ValueRef`);
+        throw new Error(`Cannot unserialize "${json}" as @appspltfrm/js-intl/ValueRef`);
     }
     constructor(namespaceOrKey, key) {
         super("value");
