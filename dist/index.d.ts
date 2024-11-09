@@ -26,6 +26,7 @@ export { formatDecimal } from "./formatDecimal";
 export { formatMessage } from "./formatMessage";
 export { formatRelativeTime } from "./formatRelativeTime";
 export { formatTime } from "./formatTime";
+export { formatNumber } from "./formatNumber";
 export { getValue } from "./getValue";
 export { importGlobalValuesFromUrl } from "./importGlobalValuesFromUrl";
 export { insertGlobalValuesVersion } from "./insertGlobalValuesVersion";
