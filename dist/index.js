@@ -1,4 +1,3 @@
-import "./globals";
 export { CountryStringSerializer } from "./CountryStringSerializer";
 export { Country } from "./Country";
 export { CurrencyCalculator } from "./CurrencyCalculator";

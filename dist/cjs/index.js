@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.translate = exports.setGlobalValues = exports.intl = exports.insertGlobalValuesVersion = exports.importGlobalValuesFromUrl = exports.getValue = exports.formatTime = exports.formatRelativeTime = exports.formatMessage = exports.formatDecimal = exports.formatDate = exports.formatDateTime = exports.formatCurrency = exports.deleteGlobalValuesVersion = exports.bestLocale = exports.ValueRef = exports.MoneyStringSerializer = exports.Money = exports.MessageRef = exports.Locale = exports.LocaleStringSerializer = exports.IntlStringValueSerializer = exports.IntlStringsStoreSerializer = exports.IntlValueSerializer = exports.IntlStoreSerializer = exports.IntlRef = exports.IntlHelper = exports.IntlContext = exports.DecimalFormatRef = exports.Currency = exports.CurrencyStringSerializer = exports.CurrencyCalculator = exports.Country = exports.CountryStringSerializer = void 0;
-require("./globals");
 var CountryStringSerializer_1 = require("./CountryStringSerializer");
 Object.defineProperty(exports, "CountryStringSerializer", { enumerable: true, get: function () { return CountryStringSerializer_1.CountryStringSerializer; } });
 var Country_1 = require("./Country");
