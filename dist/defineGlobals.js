@@ -1,4 +1,3 @@
-import "./globals";
 let defined = false;
 export function defineGlobals() {
     if (defined) {

@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.defineGlobals = defineGlobals;
-require("./globals");
 let defined = false;
 function defineGlobals() {
     if (defined) {
