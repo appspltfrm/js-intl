@@ -71,4 +71,6 @@ var setGlobalValues_1 = require("./setGlobalValues");
 Object.defineProperty(exports, "setGlobalValues", { enumerable: true, get: function () { return setGlobalValues_1.setGlobalValues; } });
 var translate_1 = require("./translate");
 Object.defineProperty(exports, "translate", { enumerable: true, get: function () { return translate_1.translate; } });
+const defineGlobals_2 = require("./defineGlobals");
+(0, defineGlobals_2.defineGlobals)();
 //# sourceMappingURL=index.js.map
