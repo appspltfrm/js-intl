@@ -7,7 +7,7 @@
     "build": "node-utils-file-system-glob-delete \"dist/**/*\" && npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc --module nodenext --target esnext --moduleResolution nodenext --outDir dist/cjs --declaration false",
     "build:esm": "tsc --module esnext --target esnext --moduleResolution bundler --outDir dist/",
-    "messages": "npx ts-node src/GoogleSheetImporter/cli.ts --output-path messages --output-type json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
+    "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
   },
   "bin": {
     "js-intl-google-sheet-importer": "./dist/cjs/GoogleSheetImporter/cli.js"
@@ -32,6 +32,7 @@
     "intl-messageformat": "^10.0.0",
     "rollup": "^4.25.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   },
   "exports": {
