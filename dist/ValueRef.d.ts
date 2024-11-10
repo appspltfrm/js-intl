@@ -1,4 +1,4 @@
-import { IntlRef } from "./IntlRef";
+import { IntlRef } from "./IntlRef.js";
 export declare class ValueRef extends IntlRef {
     static readonly jsonTypeName: string;
     static fromJSON(json: any): ValueRef;

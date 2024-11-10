@@ -1,7 +1,7 @@
 var ValueRef_1;
 import { __decorate, __metadata } from "tslib";
 import { subtype } from "@appspltfrm/js-utils/json";
-import { IntlRef } from "./IntlRef";
+import { IntlRef } from "./IntlRef.js";
 let ValueRef = class ValueRef extends IntlRef {
     static { ValueRef_1 = this; }
     static jsonTypeName = "intl/ValueRef";

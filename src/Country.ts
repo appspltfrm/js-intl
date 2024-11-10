@@ -1,4 +1,4 @@
-import {MessageRef} from "./MessageRef";
+import {MessageRef} from "./MessageRef.js";
 
 export class Country {
 

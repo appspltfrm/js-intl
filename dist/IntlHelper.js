@@ -1,11 +1,11 @@
-import { defineGlobals } from "./defineGlobals";
-import { formatDecimal } from "./formatDecimal";
-import { formatMessage } from "./formatMessage";
-import { formatNumber } from "./formatNumber";
-import { formatRelativeTime } from "./formatRelativeTime";
-import { formatTimeOrDateOrDateTime } from "./formatTimeOrDateOrDateTime";
-import { IntlContext } from "./IntlContext";
-import { translate } from "./translate";
+import { defineGlobals } from "./defineGlobals.js";
+import { formatDecimal } from "./formatDecimal.js";
+import { formatMessage } from "./formatMessage.js";
+import { formatNumber } from "./formatNumber.js";
+import { formatRelativeTime } from "./formatRelativeTime.js";
+import { formatTimeOrDateOrDateTime } from "./formatTimeOrDateOrDateTime.js";
+import { IntlContext } from "./IntlContext.js";
+import { translate } from "./translate.js";
 defineGlobals();
 function loadPolyfillsLocale() {
     if (INTL_POLYFILL && INTL_POLYFILL.length && IntlPolyfill) {

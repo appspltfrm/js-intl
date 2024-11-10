@@ -1,5 +1,5 @@
 import { Serializer } from "@appspltfrm/js-utils/json";
-import { Money } from "./Money";
+import { Money } from "./Money.js";
 export class MoneyStringSerializer extends Serializer {
     unserialize(json, options) {
         if (this.isUndefinedOrNull(json)) {

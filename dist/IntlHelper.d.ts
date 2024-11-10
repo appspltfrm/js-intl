@@ -1,11 +1,11 @@
 import { DateTimezone, Timestamp, TimeZoneDate } from "@appspltfrm/js-utils/core";
 import { BigNumber } from "bignumber.js";
-import { CurrencyAndNumber } from "./CurrencyAndNumber";
-import { DecimalFormatRef } from "./DecimalFormatRef";
-import { IntlContext } from "./IntlContext";
-import { IntlStore } from "./IntlStore";
-import { MessageRef } from "./MessageRef";
-import { Money } from "./Money";
+import { CurrencyAndNumber } from "./CurrencyAndNumber.js";
+import { DecimalFormatRef } from "./DecimalFormatRef.js";
+import { IntlContext } from "./IntlContext.js";
+import { IntlStore } from "./IntlStore.js";
+import { MessageRef } from "./MessageRef.js";
+import { Money } from "./Money.js";
 export declare class IntlHelper extends IntlContext {
     constructor(defaultLocale?: string, defaultNamespace?: string);
     /**

@@ -1,4 +1,4 @@
-import { getGlobalValuesVersions } from "./getGlobalValuesVersions";
+import { getGlobalValuesVersions } from "./getGlobalValuesVersions.js";
 export function deleteGlobalValuesVersion(versionName, namespace) {
     const versions = getGlobalValuesVersions();
     for (const ns in versions) {

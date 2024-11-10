@@ -1,7 +1,7 @@
-import { IntlContext } from "./IntlContext";
-import { MessageRef } from "./MessageRef";
-import { ValueKey } from "./ValueKey";
-import { ValueRef } from "./ValueRef";
+import { IntlContext } from "./IntlContext.js";
+import { MessageRef } from "./MessageRef.js";
+import { ValueKey } from "./ValueKey.js";
+import { ValueRef } from "./ValueRef.js";
 type KeyType = ValueKey | MessageRef | ValueRef | [namespace: string, key: string];
 interface TranslateOptions {
     formats?: any;

@@ -1,18 +1,18 @@
 import {DateTimezone, Timestamp, TimeZoneDate} from "@appspltfrm/js-utils/core";
 import {BigNumber} from "bignumber.js";
-import {CurrencyAndNumber} from "./CurrencyAndNumber";
-import {DecimalFormatRef} from "./DecimalFormatRef";
-import {defineGlobals} from "./defineGlobals";
-import {formatDecimal} from "./formatDecimal";
-import {formatMessage} from "./formatMessage";
-import {formatNumber} from "./formatNumber";
-import {formatRelativeTime} from "./formatRelativeTime";
-import {formatTimeOrDateOrDateTime} from "./formatTimeOrDateOrDateTime";
-import {IntlContext} from "./IntlContext";
-import {IntlStore} from "./IntlStore";
-import {MessageRef} from "./MessageRef";
-import {Money} from "./Money";
-import {translate} from "./translate";
+import {CurrencyAndNumber} from "./CurrencyAndNumber.js";
+import {DecimalFormatRef} from "./DecimalFormatRef.js";
+import {defineGlobals} from "./defineGlobals.js";
+import {formatDecimal} from "./formatDecimal.js";
+import {formatMessage} from "./formatMessage.js";
+import {formatNumber} from "./formatNumber.js";
+import {formatRelativeTime} from "./formatRelativeTime.js";
+import {formatTimeOrDateOrDateTime} from "./formatTimeOrDateOrDateTime.js";
+import {IntlContext} from "./IntlContext.js";
+import {IntlStore} from "./IntlStore.js";
+import {MessageRef} from "./MessageRef.js";
+import {Money} from "./Money.js";
+import {translate} from "./translate.js";
 
 defineGlobals();
 

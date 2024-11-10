@@ -1,4 +1,4 @@
-import { defineGlobals } from "./defineGlobals";
+import { defineGlobals } from "./defineGlobals.js";
 defineGlobals();
 export function getGlobalValues() {
     if (!INTL_VALUES) {

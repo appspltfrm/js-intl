@@ -1,13 +1,13 @@
 import IntlMessageFormat from "intl-messageformat";
-import {DecimalFormatRef} from "./DecimalFormatRef";
-import {extractNamespaceAndKey} from "./extractNamespaceAndKey";
-import {formatDecimal} from "./formatDecimal";
-import {getGlobalVersionedValue} from "./getGlobalVersionedValue";
-import {IntlContext} from "./IntlContext";
-import {isFormattedMessage} from "./isFormattedMessage";
-import {MessageRef} from "./MessageRef";
-import {ValueKey} from "./ValueKey";
-import {ValueRef} from "./ValueRef";
+import {DecimalFormatRef} from "./DecimalFormatRef.js";
+import {extractNamespaceAndKey} from "./extractNamespaceAndKey.js";
+import {formatDecimal} from "./formatDecimal.js";
+import {getGlobalVersionedValue} from "./getGlobalVersionedValue.js";
+import {IntlContext} from "./IntlContext.js";
+import {isFormattedMessage} from "./isFormattedMessage.js";
+import {MessageRef} from "./MessageRef.js";
+import {ValueKey} from "./ValueKey.js";
+import {ValueRef} from "./ValueRef.js";
 
 type KeyType = ValueKey | MessageRef | ValueRef | [namespace: string, key: string];
 

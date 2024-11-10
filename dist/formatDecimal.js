@@ -1,7 +1,7 @@
-import { DecimalFormatRef } from "./DecimalFormatRef";
-import { defineGlobals } from "./defineGlobals";
-import { formatNumber } from "./formatNumber";
-import { IntlContext } from "./IntlContext";
+import { DecimalFormatRef } from "./DecimalFormatRef.js";
+import { defineGlobals } from "./defineGlobals.js";
+import { formatNumber } from "./formatNumber.js";
+import { IntlContext } from "./IntlContext.js";
 defineGlobals();
 export function formatDecimal() {
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;

@@ -1,4 +1,4 @@
-import { IntlRef } from "./IntlRef";
+import { IntlRef } from "./IntlRef.js";
 export declare class MessageRef extends IntlRef {
     static readonly jsonTypeName = "intl/MessageRef";
     static fromJSON(json: any): MessageRef;

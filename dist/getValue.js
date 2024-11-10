@@ -1,5 +1,5 @@
-import { extractNamespaceAndKey } from "./extractNamespaceAndKey";
-import { getGlobalVersionedValue } from "./getGlobalVersionedValue";
+import { extractNamespaceAndKey } from "./extractNamespaceAndKey.js";
+import { getGlobalVersionedValue } from "./getGlobalVersionedValue.js";
 export function getValue(context, key) {
     const namespaceAndKey = extractNamespaceAndKey(key, context.defaultNamespace);
     if (!namespaceAndKey.namespace) {

@@ -1,6 +1,6 @@
-import { defineGlobals } from "./defineGlobals";
-import { formatNumber } from "./formatNumber";
-import { IntlContext } from "./IntlContext";
+import { defineGlobals } from "./defineGlobals.js";
+import { formatNumber } from "./formatNumber.js";
+import { IntlContext } from "./IntlContext.js";
 defineGlobals();
 export function formatCurrency() {
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;

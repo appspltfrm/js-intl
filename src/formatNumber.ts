@@ -1,8 +1,8 @@
 import {BigNumber} from "bignumber.js";
-import {Currency} from "./Currency";
-import {CurrencyAndNumber} from "./CurrencyAndNumber";
-import {IntlContext} from "./IntlContext";
-import {Money} from "./Money";
+import {Currency} from "./Currency.js";
+import {CurrencyAndNumber} from "./CurrencyAndNumber.js";
+import {IntlContext} from "./IntlContext.js";
+import {Money} from "./Money.js";
 
 export type NumberFormatType = "currency" | "percent" | "decimal";
 

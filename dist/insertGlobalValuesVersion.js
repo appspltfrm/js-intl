@@ -1,4 +1,4 @@
-import { getGlobalValuesVersions } from "./getGlobalValuesVersions";
+import { getGlobalValuesVersions } from "./getGlobalValuesVersions.js";
 export function insertGlobalValuesVersion(versionName, priority, namespace, locale, messages) {
     const versionsByNamespace = getGlobalValuesVersions();
     const versions = versionsByNamespace[namespace] || (versionsByNamespace[namespace] = []);

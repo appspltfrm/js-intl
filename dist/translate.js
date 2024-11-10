@@ -1,11 +1,11 @@
 import IntlMessageFormat from "intl-messageformat";
-import { DecimalFormatRef } from "./DecimalFormatRef";
-import { extractNamespaceAndKey } from "./extractNamespaceAndKey";
-import { formatDecimal } from "./formatDecimal";
-import { getGlobalVersionedValue } from "./getGlobalVersionedValue";
-import { IntlContext } from "./IntlContext";
-import { isFormattedMessage } from "./isFormattedMessage";
-import { MessageRef } from "./MessageRef";
+import { DecimalFormatRef } from "./DecimalFormatRef.js";
+import { extractNamespaceAndKey } from "./extractNamespaceAndKey.js";
+import { formatDecimal } from "./formatDecimal.js";
+import { getGlobalVersionedValue } from "./getGlobalVersionedValue.js";
+import { IntlContext } from "./IntlContext.js";
+import { isFormattedMessage } from "./isFormattedMessage.js";
+import { MessageRef } from "./MessageRef.js";
 export function translate() {
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
     const context = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;

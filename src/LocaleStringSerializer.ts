@@ -1,5 +1,5 @@
 import {SerializationOptions, Serializer} from "@appspltfrm/js-utils/json";
-import {Locale} from "./Locale";
+import {Locale} from "./Locale.js";
 
 export class LocaleStringSerializer extends Serializer {
 

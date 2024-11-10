@@ -1,5 +1,5 @@
 import { BigNumber } from "bignumber.js";
-import { Currency } from "./Currency";
+import { Currency } from "./Currency.js";
 function toBigNumber(value) {
     if (value instanceof BigNumber) {
         return value;

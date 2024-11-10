@@ -1,5 +1,5 @@
-import type { IntlBundleItem } from "./BundleGenerator";
-import { MessageRef } from "./MessageRef";
+import type { IntlBundleItem } from "./BundleGenerator/BundleGenerator.js";
+import { MessageRef } from "./MessageRef.js";
 export declare const localeIntlBundleItem: IntlBundleItem;
 /**
  * https://en.wikipedia.org/wiki/IETF-language-tag

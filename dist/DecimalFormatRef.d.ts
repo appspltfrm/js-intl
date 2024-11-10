@@ -1,5 +1,5 @@
 import { BigNumber } from "bignumber.js";
-import { IntlRef } from "./IntlRef";
+import { IntlRef } from "./IntlRef.js";
 export declare class DecimalFormatRef extends IntlRef {
     static readonly jsonTypeName = "intl/DecimalFormatRef";
     static fromJSON(json: any): DecimalFormatRef;

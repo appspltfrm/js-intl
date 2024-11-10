@@ -1,5 +1,5 @@
 import {SerializationOptions, Serializer} from "@appspltfrm/js-utils/json";
-import {Country} from "./Country";
+import {Country} from "./Country.js";
 
 export class CountryStringSerializer extends Serializer {
 

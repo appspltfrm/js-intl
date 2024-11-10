@@ -1,8 +1,8 @@
 import {BigNumber} from "bignumber.js";
-import {DecimalFormatRef} from "./DecimalFormatRef";
-import {defineGlobals} from "./defineGlobals";
-import {formatNumber} from "./formatNumber";
-import {IntlContext} from "./IntlContext";
+import {DecimalFormatRef} from "./DecimalFormatRef.js";
+import {defineGlobals} from "./defineGlobals.js";
+import {formatNumber} from "./formatNumber.js";
+import {IntlContext} from "./IntlContext.js";
 
 defineGlobals();
 

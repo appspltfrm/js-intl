@@ -1,6 +1,6 @@
 import {HtmlString} from "@appspltfrm/js-utils/core";
 import IntlMessageFormat from "intl-messageformat";
-import {IntlContext} from "./IntlContext";
+import {IntlContext} from "./IntlContext.js";
 
 type MessageType = string | HtmlString;
 

@@ -1,5 +1,5 @@
-import {getGlobalValues} from "./getGlobalValues";
-import {getGlobalValuesVersions} from "./getGlobalValuesVersions";
+import {getGlobalValues} from "./getGlobalValues.js";
+import {getGlobalValuesVersions} from "./getGlobalValuesVersions.js";
 
 export function getGlobalVersionedValue(locales: string[], namespace: string, key: string) {
 

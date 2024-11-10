@@ -1,6 +1,6 @@
 import { BigNumber } from "bignumber.js";
-import { Currency } from "./Currency";
-import { Money } from "./Money";
+import { Currency } from "./Currency.js";
+import { Money } from "./Money.js";
 export interface ExchangeRate {
     currency: Currency;
     amount: BigNumber;

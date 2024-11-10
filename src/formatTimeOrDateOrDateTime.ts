@@ -1,5 +1,5 @@
 import {DateTimezone, Timestamp, TimeZoneDate, LocalDate, NoTimeDate} from "@appspltfrm/js-utils/core";
-import {IntlContext} from "./IntlContext";
+import {IntlContext} from "./IntlContext.js";
 
 export function formatTimeOrDateOrDateTime(context: IntlContext, mode: "time" | "date" | "dateTime", dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, predefinedOptionsOrOptions?: string | Intl.DateTimeFormatOptions, options?: Intl.DateTimeFormatOptions) {
 

@@ -2,7 +2,7 @@
 
 import yargs from "yargs";
 import {hideBin} from "yargs/helpers";
-import {GoogleSheetImporter} from "./GoogleSheetImporter";
+import {GoogleSheetImporter} from "./GoogleSheetImporter.js";
 
 (async () => {
 

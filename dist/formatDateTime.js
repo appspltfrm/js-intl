@@ -1,5 +1,5 @@
-import { formatTimeOrDateOrDateTime } from "./formatTimeOrDateOrDateTime";
-import { IntlContext } from "./IntlContext";
+import { formatTimeOrDateOrDateTime } from "./formatTimeOrDateOrDateTime.js";
+import { IntlContext } from "./IntlContext.js";
 export function formatDateTime() {
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
     const context = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;

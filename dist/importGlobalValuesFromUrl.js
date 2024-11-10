@@ -1,5 +1,5 @@
-import { getGlobalValues } from "./getGlobalValues";
-import { IntlContext } from "./IntlContext";
+import { getGlobalValues } from "./getGlobalValues.js";
+import { IntlContext } from "./IntlContext.js";
 const importedResources = [];
 export function importGlobalValuesFromUrl() {
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;

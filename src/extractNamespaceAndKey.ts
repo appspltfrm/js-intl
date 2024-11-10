@@ -1,5 +1,5 @@
-import {MessageRef} from "./MessageRef";
-import {ValueRef} from "./ValueRef";
+import {MessageRef} from "./MessageRef.js";
+import {ValueRef} from "./ValueRef.js";
 
 export function extractNamespaceAndKey(namespaceAndKey: string | MessageRef | ValueRef | [namespace: string, key: string], defaultNamespace?: string): {namespace: string, key: string} {
 

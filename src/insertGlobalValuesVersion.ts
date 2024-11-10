@@ -1,4 +1,4 @@
-import {getGlobalValuesVersions} from "./getGlobalValuesVersions";
+import {getGlobalValuesVersions} from "./getGlobalValuesVersions.js";
 
 export function insertGlobalValuesVersion(versionName: string, priority: number, namespace: string, locale: string, messages: {[key: string]: string}) {
 

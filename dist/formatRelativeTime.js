@@ -1,7 +1,7 @@
 import { DateTimezone } from "@appspltfrm/js-utils/core";
-import { bestRelativeTimeFormatValue } from "./bestRelativeTimeFormatValue";
-import { defineGlobals } from "./defineGlobals";
-import { IntlContext } from "./IntlContext";
+import { bestRelativeTimeFormatValue } from "./bestRelativeTimeFormatValue.js";
+import { defineGlobals } from "./defineGlobals.js";
+import { IntlContext } from "./IntlContext.js";
 defineGlobals();
 export function formatRelativeTime() {
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;

@@ -1,4 +1,4 @@
-import { getGlobalValues } from "./getGlobalValues";
+import { getGlobalValues } from "./getGlobalValues.js";
 export function setGlobalValues(namespace, locale, newValues) {
     const values = getGlobalValues();
     if (!values[namespace]) {

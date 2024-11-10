@@ -1,5 +1,5 @@
-import {getGlobalValues} from "./getGlobalValues";
-import {IntlContext} from "./IntlContext";
+import {getGlobalValues} from "./getGlobalValues.js";
+import {IntlContext} from "./IntlContext.js";
 
 const importedResources: string[] = [];
 

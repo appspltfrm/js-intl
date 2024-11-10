@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { GoogleSheetImporter } from "./GoogleSheetImporter";
+import { GoogleSheetImporter } from "./GoogleSheetImporter.js";
 (async () => {
     const argv = await yargs(hideBin(process.argv))
         .option("outputPath", { description: "Output directory path", type: "string" })

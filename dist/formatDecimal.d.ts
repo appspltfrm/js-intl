@@ -1,6 +1,6 @@
 import { BigNumber } from "bignumber.js";
-import { DecimalFormatRef } from "./DecimalFormatRef";
-import { IntlContext } from "./IntlContext";
+import { DecimalFormatRef } from "./DecimalFormatRef.js";
+import { IntlContext } from "./IntlContext.js";
 type ValueType = number | BigNumber | DecimalFormatRef;
 type PredefinedOptionsType = string | Intl.NumberFormatOptions;
 export declare function formatDecimal(value: ValueType, predefinedOptionsOrOptions?: string | Intl.NumberFormatOptions, additionalOptions?: Intl.NumberFormatOptions): any;

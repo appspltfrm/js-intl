@@ -1,4 +1,4 @@
-import { defineGlobals } from "./defineGlobals";
+import { defineGlobals } from "./defineGlobals.js";
 defineGlobals();
 export function getGlobalValuesVersions() {
     if (!INTL_VALUES_VERSIONS) {

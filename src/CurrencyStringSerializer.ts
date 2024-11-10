@@ -1,5 +1,5 @@
 import {SerializationOptions, Serializer} from "@appspltfrm/js-utils/json";
-import {Currency} from "./Currency";
+import {Currency} from "./Currency.js";
 
 export class CurrencyStringSerializer extends Serializer {
 

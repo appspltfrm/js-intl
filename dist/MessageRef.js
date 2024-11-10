@@ -1,7 +1,7 @@
 var MessageRef_1;
 import { __decorate, __metadata } from "tslib";
 import { serialize, subtype } from "@appspltfrm/js-utils/json";
-import { IntlRef } from "./IntlRef";
+import { IntlRef } from "./IntlRef.js";
 let MessageRef = class MessageRef extends IntlRef {
     static { MessageRef_1 = this; }
     static jsonTypeName = "intl/MessageRef";

@@ -1,4 +1,4 @@
-import { MessageRef } from "./MessageRef";
+import { MessageRef } from "./MessageRef.js";
 export declare class Country {
     private static readonly _iso;
     private static readonly _codes;

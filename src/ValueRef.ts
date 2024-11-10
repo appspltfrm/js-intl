@@ -1,5 +1,5 @@
 import {subtype} from "@appspltfrm/js-utils/json";
-import {IntlRef} from "./IntlRef";
+import {IntlRef} from "./IntlRef.js";
 
 @subtype(IntlRef, "refType", "message")
 export class ValueRef extends IntlRef {

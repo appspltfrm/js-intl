@@ -1,5 +1,5 @@
 import { Serializer } from "@appspltfrm/js-utils/json";
-import { Country } from "./Country";
+import { Country } from "./Country.js";
 export class CountryStringSerializer extends Serializer {
     unserialize(json, options) {
         if (this.isUndefinedOrNull(json)) {

@@ -1,8 +1,8 @@
-import {CurrencyAndNumber} from "./CurrencyAndNumber";
-import {defineGlobals} from "./defineGlobals";
-import {formatNumber} from "./formatNumber";
-import {IntlContext} from "./IntlContext";
-import {Money} from "./Money";
+import {CurrencyAndNumber} from "./CurrencyAndNumber.js";
+import {defineGlobals} from "./defineGlobals.js";
+import {formatNumber} from "./formatNumber.js";
+import {IntlContext} from "./IntlContext.js";
+import {Money} from "./Money.js";
 
 defineGlobals();
 

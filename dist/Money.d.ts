@@ -1,5 +1,5 @@
 import { BigNumber } from "bignumber.js";
-import { Currency } from "./Currency";
+import { Currency } from "./Currency.js";
 export declare class Money {
     static readonly jsonTypeName = "intl/Money";
     static fromJSON(json: any): Money;
