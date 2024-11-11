@@ -1,2 +1,2 @@
 export { GoogleSheetImporter } from "./GoogleSheetImporter.js";
-//# sourceMappingURL=public.js.map
+//# sourceMappingURL=index.js.map

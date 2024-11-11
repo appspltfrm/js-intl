@@ -34,4 +34,4 @@ export { setGlobalValues } from "./setGlobalValues.js";
 export { translate } from "./translate.js";
 import { defineGlobals } from "./defineGlobals.js";
 defineGlobals();
-//# sourceMappingURL=public.js.map
+//# sourceMappingURL=index.js.map

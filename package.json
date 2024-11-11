@@ -37,12 +37,12 @@
   },
   "exports": {
     ".": {
-      "types": "./public.d.ts",
-      "import": "./public.js"
+      "types": "./index.d.ts",
+      "import": "./index.js"
     },
     "./*": {
-      "types": "./*/public.d.ts",
-      "import": "./*/public.js"
+      "types": "./*/index.d.ts",
+      "import": "./*/index.js"
     },
     "./messages/*": {
       "default": "./messages/*.json"
