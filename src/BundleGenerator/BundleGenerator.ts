@@ -1,5 +1,6 @@
-import * as fsextra from "fs-extra";
-import {existsSync, readJsonSync} from "fs-extra";
+import {ensureFileSync, readJsonSync} from "fs-extra/esm";
+import {existsSync, readFileSync} from "fs";
+import {copyFileSync, writeFileSync} from "node:fs";
 import * as path from "path";
 
 export interface IntlBundleItem {
@@ -126,7 +127,7 @@ export class IntlBundleGenerator {
             let intlRelativeTimePolyfill: boolean = false;
 
             let outputFile = path.resolve(this.outputFile.replace("{{LOCALE}}", baseLocale));
-            fsextra.ensureFileSync(outputFile);
+            ensureFileSync(outputFile);
 
             for (let locale of this.extractLocales(baseLocale)) {
 
@@ -140,11 +141,11 @@ export class IntlBundleGenerator {
 
                         let p = path.resolve(itemPath.replace("{{LOCALE}}", dashed));
 
-                        if (!fsextra.existsSync(itemPath)) {
+                        if (!existsSync(itemPath)) {
                             p = path.resolve(itemPath.replace("{{LOCALE}}", underscored));
                         }
 
-                        if (fsextra.existsSync(p)) {
+                        if (existsSync(p)) {
                             return p;
                         }
                     }
@@ -179,19 +180,19 @@ export class IntlBundleGenerator {
                                 values[item.namespace][baseLocale] = {};
                             }
 
-                            let json = fsextra.readJsonSync(itemPath);
+                            let json = readJsonSync(itemPath);
 
                             // we must look for resources and copy resources into output directory
                             for (let key in json) {
                                 if (typeof json[key] != "string" && json[key]["file"]) {
-                                    fsextra.copyFileSync(path.resolve(path.dirname(itemPath), json[key]["file"]), path.resolve(path.dirname(outputFile), json[key]["file"] = `${item.namespace}-${json[key]["file"]}`.replace(/[^(\w|\d|\.|\@|\_|\-|\,|\$)]/, "-")));
+                                    copyFileSync(path.resolve(path.dirname(itemPath), json[key]["file"]), path.resolve(path.dirname(outputFile), json[key]["file"] = `${item.namespace}-${json[key]["file"]}`.replace(/[^(\w|\d|\.|\@|\_|\-|\,|\$)]/, "-")));
                                 }
                             }
 
                             Object.assign(values[item.namespace][baseLocale], json);
 
                         } else {
-                            let c = fsextra.readFileSync(itemPath).toString();
+                            let c = readFileSync(itemPath).toString();
 
                             if (item instanceof IntlPolyfillBundleItem) {
                                 intlPolyfill = true;
@@ -244,7 +245,7 @@ export class IntlBundleGenerator {
                 );
             }
 
-            fsextra.writeFileSync(outputFile, contents.join("\n"));
+            writeFileSync(outputFile, contents.join("\n"));
         }
     }
 

@@ -1,6 +1,7 @@
-import * as fileSystem from "fs-extra";
-import * as https from "https";
-import * as path from "path";
+import {ensureDirSync, writeJsonSync} from "fs-extra/esm";
+import {unlinkSync, writeFileSync} from "fs";
+import https from "http";
+import path from "path";
 import {parseString} from "@fast-csv/parse";
 
 export class GoogleSheetImporter {
@@ -54,7 +55,7 @@ export class GoogleSheetImporter {
             }
         }
 
-        fileSystem.ensureDirSync(this.outputPath);
+        ensureDirSync(this.outputPath);
 
         for (const locale in data) {
 
@@ -63,7 +64,7 @@ export class GoogleSheetImporter {
             if (!Object.keys(data[locale]).length) {
 
                 try {
-                    fileSystem.unlinkSync(filePath);
+                    unlinkSync(filePath);
                 } catch (e) {
                 }
 
@@ -145,9 +146,9 @@ export class GoogleSheetImporter {
             }
 
             if (this.outputType == "json") {
-                fileSystem.writeJsonSync(filePath, sorted, {spaces: 4, encoding: "UTF-8"});
+                writeJsonSync(filePath, sorted, {spaces: 4, encoding: "UTF-8"});
             } else if (this.outputType == "ts") {
-                fileSystem.writeFileSync(filePath, `export default ${JSON.stringify(sorted, undefined, 4)}`);
+                writeFileSync(filePath, `export default ${JSON.stringify(sorted, undefined, 4)}`);
             }
         }
     }
