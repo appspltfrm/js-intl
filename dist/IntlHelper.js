@@ -1,3 +1,4 @@
+import { HtmlString } from "@appspltfrm/js-utils/core";
 import { defineGlobals } from "./defineGlobals.js";
 import { formatDecimal } from "./formatDecimal.js";
 import { formatMessage } from "./formatMessage.js";
@@ -88,7 +89,7 @@ export class IntlHelper extends IntlContext {
     }
     message(key, values, formats) {
         const message = translate(this, Array.isArray(key) ? (key.length > 0 ? key[0] : "") : key, values, { formats });
-        if (typeof message === "string") {
+        if (typeof message === "string" || message instanceof HtmlString) {
             return message;
         }
         else if (message) {

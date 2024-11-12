@@ -1,4 +1,4 @@
-import { DateTimezone, Timestamp, TimeZoneDate } from "@appspltfrm/js-utils/core";
+import { DateTimezone, HtmlString, Timestamp, TimeZoneDate } from "@appspltfrm/js-utils/core";
 import { BigNumber } from "bignumber.js";
 import { CurrencyAndNumber } from "./CurrencyAndNumber.js";
 import { DecimalFormatRef } from "./DecimalFormatRef.js";
@@ -34,9 +34,9 @@ export declare class IntlHelper extends IntlContext {
     value<T = string>(value: IntlStore<T>): T;
     messageFormat(message: string, values: {
         [key: string]: any;
-    }, formats?: any): string;
-    message(strings: TemplateStringsArray, ...values: any): string;
-    message(key: string | MessageRef, values?: any, formats?: any): any;
+    }, formats?: any): string | HtmlString;
+    message(strings: TemplateStringsArray, ...values: any): string | HtmlString;
+    message(key: string | MessageRef, values?: any, formats?: any): string | HtmlString;
     relativeFormat(dateTime: number | Date | DateTimezone | Timestamp, options?: any): string;
     dateFormat(dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, options?: Intl.DateTimeFormatOptions): string;
     timeFormat(dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, options?: Intl.DateTimeFormatOptions): string;

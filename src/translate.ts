@@ -1,3 +1,4 @@
+import {HtmlString} from "@appspltfrm/js-utils/core";
 import IntlMessageFormat from "intl-messageformat";
 import {DecimalFormatRef} from "./DecimalFormatRef.js";
 import {extractNamespaceAndKey} from "./extractNamespaceAndKey.js";
@@ -13,14 +14,14 @@ type KeyType = ValueKey | MessageRef | ValueRef | [namespace: string, key: strin
 
 interface TranslateOptions {
     formats?: any;
-    defaultMessage?: "key" | "undefined" | ((namespace: string, key: string) => string);
+    defaultMessage?: "key" | "undefined" | ((namespace: string, key: string) => string | HtmlString);
 }
 
-export function translate(key: KeyType, values?: any, options?: TranslateOptions): string;
+export function translate(key: KeyType, values?: any, options?: TranslateOptions): string | HtmlString;
 
-export function translate(context: IntlContext, key: KeyType, values?: any, options?: TranslateOptions): string;
+export function translate(context: IntlContext, key: KeyType, values?: any, options?: TranslateOptions): string | HtmlString;
 
-export function translate(): string {
+export function translate(): string | HtmlString {
 
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
     const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
@@ -77,10 +78,16 @@ export function translate(): string {
         }
     }
 
-    if (typeof message === "string") {
+    const isHtml = message instanceof HtmlString || (typeof message === "object" && message["@type"] === "HtmlString");
 
+    if (typeof message === "string" || isHtml) {
+        message = isHtml ? message.value : message;
         if (isFormattedMessage(message)) {
-            return new IntlMessageFormat(message, context.locales, options?.formats, {ignoreTag: true}).format(values) as string;
+            message = new IntlMessageFormat(message, context.locales, options?.formats, {ignoreTag: true}).format(values) as string;
+        }
+
+        if (isHtml) {
+            return new HtmlString(message);
         } else {
             return message;
         }

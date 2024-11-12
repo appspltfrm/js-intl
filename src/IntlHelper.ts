@@ -1,4 +1,4 @@
-import {DateTimezone, Timestamp, TimeZoneDate} from "@appspltfrm/js-utils/core";
+import {DateTimezone, HtmlString, Timestamp, TimeZoneDate} from "@appspltfrm/js-utils/core";
 import {BigNumber} from "bignumber.js";
 import {CurrencyAndNumber} from "./CurrencyAndNumber.js";
 import {DecimalFormatRef} from "./DecimalFormatRef.js";
@@ -128,19 +128,18 @@ export class IntlHelper extends IntlContext {
         }
     }
 
-    messageFormat(message: string, values: { [key: string]: any }, formats?: any): string {
+    messageFormat(message: string, values: { [key: string]: any }, formats?: any): string | HtmlString {
         return formatMessage(this, message, values, formats);
     }
 
-    message(strings: TemplateStringsArray, ...values: any): string;
+    message(strings: TemplateStringsArray, ...values: any): string | HtmlString;
 
-    message(key: string | MessageRef, values?: any, formats?: any);
+    message(key: string | MessageRef, values?: any, formats?: any): string | HtmlString;
 
-    message(key: string | MessageRef | TemplateStringsArray, values?: any, formats?: any): string {
-
+    message(key: string | MessageRef | TemplateStringsArray, values?: any, formats?: any): string | HtmlString {
         const message = translate(this, Array.isArray(key) ? (key.length > 0 ? key[0] : "") : key, values, {formats});
-        if (typeof message === "string") {
-            return message as string;
+        if (typeof message === "string" || message instanceof HtmlString) {
+            return message;
         } else if (message) {
             throw new Error("External message, use asyncMessage()");
         } else {

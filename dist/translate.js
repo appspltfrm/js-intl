@@ -1,3 +1,4 @@
+import { HtmlString } from "@appspltfrm/js-utils/core";
 import IntlMessageFormat from "intl-messageformat";
 import { DecimalFormatRef } from "./DecimalFormatRef.js";
 import { extractNamespaceAndKey } from "./extractNamespaceAndKey.js";
@@ -54,9 +55,14 @@ export function translate() {
             return undefined;
         }
     }
-    if (typeof message === "string") {
+    const isHtml = message instanceof HtmlString || (typeof message === "object" && message["@type"] === "HtmlString");
+    if (typeof message === "string" || isHtml) {
+        message = isHtml ? message.value : message;
         if (isFormattedMessage(message)) {
-            return new IntlMessageFormat(message, context.locales, options?.formats, { ignoreTag: true }).format(values);
+            message = new IntlMessageFormat(message, context.locales, options?.formats, { ignoreTag: true }).format(values);
+        }
+        if (isHtml) {
+            return new HtmlString(message);
         }
         else {
             return message;
