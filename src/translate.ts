@@ -10,23 +10,23 @@ import {MessageRef} from "./MessageRef.js";
 import {ValueKey} from "./ValueKey.js";
 import {ValueRef} from "./ValueRef.js";
 
-type KeyType = ValueKey | MessageRef | ValueRef | [namespace: string, key: string];
+export type TranslateKeyType = ValueKey | MessageRef | ValueRef | [namespace: string, key: string];
 
 interface TranslateOptions {
     formats?: any;
     defaultMessage?: "key" | "undefined" | ((namespace: string, key: string) => string | HtmlString);
 }
 
-export function translate(key: KeyType, values?: any, options?: TranslateOptions): string | HtmlString;
+export function translate(key: TranslateKeyType, values?: any, options?: TranslateOptions): string | HtmlString;
 
-export function translate(context: IntlContext, key: KeyType, values?: any, options?: TranslateOptions): string | HtmlString;
+export function translate(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): string | HtmlString;
 
 export function translate(): string | HtmlString {
 
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
     const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
 
-    const key: KeyType = arguments[0 + knownContext];
+    const key: TranslateKeyType = arguments[0 + knownContext];
     let values: any = arguments[1 + knownContext];
     let options: TranslateOptions = arguments[2 + knownContext];
 

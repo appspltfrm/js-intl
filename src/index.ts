@@ -33,7 +33,7 @@ export {importGlobalValuesFromUrl} from "./importGlobalValuesFromUrl.js";
 export {insertGlobalValuesVersion} from "./insertGlobalValuesVersion.js";
 export {intl} from "./intl.js";
 export {setGlobalValues} from "./setGlobalValues.js";
-export {translate} from "./translate.js";
+export {translate, TranslateKeyType} from "./translate.js";
 
 import {defineGlobals} from "./defineGlobals.js";
 
