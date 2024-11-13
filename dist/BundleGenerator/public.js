@@ -1,2 +1,2 @@
 export { IntlBundleGenerator, IntlBundleItem } from "./BundleGenerator.js";
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=public.js.map
