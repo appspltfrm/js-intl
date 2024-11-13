@@ -17,11 +17,11 @@ interface TranslateOptions {
     defaultMessage?: "key" | "undefined" | ((namespace: string, key: string) => string | HtmlString);
 }
 
-export function translate<R = any>(key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
+export function translate(key: TranslateKeyType, values?: any, options?: TranslateOptions): any;
 
-export function translate<R = any>(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
+export function translate(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): any;
 
-export function translate<R = any>(): R {
+export function translate(): any {
 
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
     const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
@@ -32,7 +32,7 @@ export function translate<R = any>(): R {
 
     const namespaceAndKey = extractNamespaceAndKey(key, context.defaultNamespace);
     if (!namespaceAndKey.namespace) {
-        return namespaceAndKey.key as R;
+        return namespaceAndKey.key;
     }
 
     if (key instanceof MessageRef) {
@@ -72,7 +72,7 @@ export function translate<R = any>(): R {
         if (!options?.defaultMessage || options.defaultMessage === "key") {
             message = namespaceAndKey.key.replace(/.+\//g, "").replace(/\|.*/g, "").trim();
         } else if (typeof options.defaultMessage === "function") {
-            return options.defaultMessage(namespaceAndKey.namespace, namespaceAndKey.key) as R;
+            return options.defaultMessage(namespaceAndKey.namespace, namespaceAndKey.key);
         } else {
             return undefined;
         }
@@ -87,12 +87,12 @@ export function translate<R = any>(): R {
         }
 
         if (isHtml) {
-            return new HtmlString(message) as R;
+            return new HtmlString(message);
         } else {
-            return message as R;
+            return message;
         }
 
     } else {
-        return `${message}` as R;
+        return `${message}`;
     }
 }
