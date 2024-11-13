@@ -17,11 +17,11 @@ interface TranslateOptions {
     defaultMessage?: "key" | "undefined" | ((namespace: string, key: string) => string | HtmlString);
 }
 
-export function translate<R extends string | HtmlString | any = any>(key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
+export function translate<R = any>(key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
 
-export function translate<R extends string | HtmlString | any = any>(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
+export function translate<R = any>(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
 
-export function translate<R extends string | HtmlString | any = any>(): R {
+export function translate<R = any>(): R {
 
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
     const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
