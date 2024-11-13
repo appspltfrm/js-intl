@@ -35,8 +35,8 @@ export declare class IntlHelper extends IntlContext {
     messageFormat(message: string, values: {
         [key: string]: any;
     }, formats?: any): string | HtmlString;
-    message<R extends string | HtmlString | any = any>(strings: TemplateStringsArray, ...values: any): R;
-    message<R extends string | HtmlString | any = any>(key: string | MessageRef, values?: any, formats?: any): R;
+    message(strings: TemplateStringsArray, ...values: any): any;
+    message(key: string | MessageRef, values?: any, formats?: any): any;
     relativeFormat(dateTime: number | Date | DateTimezone | Timestamp, options?: any): string;
     dateFormat(dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, options?: Intl.DateTimeFormatOptions): string;
     timeFormat(dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, options?: Intl.DateTimeFormatOptions): string;
