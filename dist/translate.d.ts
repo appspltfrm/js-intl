@@ -8,6 +8,6 @@ interface TranslateOptions {
     formats?: any;
     defaultMessage?: "key" | "undefined" | ((namespace: string, key: string) => string | HtmlString);
 }
-export declare function translate(key: TranslateKeyType, values?: any, options?: TranslateOptions): string | HtmlString;
-export declare function translate(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): string | HtmlString;
+export declare function translate<R extends string | HtmlString = any>(key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
+export declare function translate<R extends string | HtmlString = any>(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
 export {};

@@ -17,11 +17,11 @@ interface TranslateOptions {
     defaultMessage?: "key" | "undefined" | ((namespace: string, key: string) => string | HtmlString);
 }
 
-export function translate(key: TranslateKeyType, values?: any, options?: TranslateOptions): string | HtmlString;
+export function translate<R extends string | HtmlString = any>(key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
 
-export function translate(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): string | HtmlString;
+export function translate<R extends string | HtmlString = any>(context: IntlContext, key: TranslateKeyType, values?: any, options?: TranslateOptions): R;
 
-export function translate(): string | HtmlString {
+export function translate<R extends string | HtmlString = any>(): R {
 
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
     const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
@@ -32,7 +32,7 @@ export function translate(): string | HtmlString {
 
     const namespaceAndKey = extractNamespaceAndKey(key, context.defaultNamespace);
     if (!namespaceAndKey.namespace) {
-        return namespaceAndKey.key;
+        return namespaceAndKey.key as R;
     }
 
     if (key instanceof MessageRef) {
@@ -72,7 +72,7 @@ export function translate(): string | HtmlString {
         if (!options?.defaultMessage || options.defaultMessage === "key") {
             message = namespaceAndKey.key.replace(/.+\//g, "").replace(/\|.*/g, "").trim();
         } else if (typeof options.defaultMessage === "function") {
-            return options.defaultMessage(namespaceAndKey.namespace, namespaceAndKey.key);
+            return options.defaultMessage(namespaceAndKey.namespace, namespaceAndKey.key) as R;
         } else {
             return undefined;
         }
@@ -87,12 +87,12 @@ export function translate(): string | HtmlString {
         }
 
         if (isHtml) {
-            return new HtmlString(message);
+            return new HtmlString(message) as R;
         } else {
-            return message;
+            return message as R;
         }
 
     } else {
-        return `${message}`;
+        return `${message}` as R;
     }
 }

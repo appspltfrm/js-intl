@@ -132,12 +132,12 @@ export class IntlHelper extends IntlContext {
         return formatMessage(this, message, values, formats);
     }
 
-    message(strings: TemplateStringsArray, ...values: any): string | HtmlString;
+    message<R extends string | HtmlString = any>(strings: TemplateStringsArray, ...values: any): R;
 
-    message(key: string | MessageRef, values?: any, formats?: any): string | HtmlString;
+    message<R extends string | HtmlString = any>(key: string | MessageRef, values?: any, formats?: any): R;
 
-    message(key: string | MessageRef | TemplateStringsArray, values?: any, formats?: any): string | HtmlString {
-        const message = translate(this, Array.isArray(key) ? (key.length > 0 ? key[0] : "") : key, values, {formats});
+    message<R extends string | HtmlString = any>(key: string | MessageRef | TemplateStringsArray, values?: any, formats?: any): R {
+        const message = translate<R>(this, Array.isArray(key) ? (key.length > 0 ? key[0] : "") : key, values, {formats});
         if (typeof message === "string" || message instanceof HtmlString) {
             return message;
         } else if (message) {
