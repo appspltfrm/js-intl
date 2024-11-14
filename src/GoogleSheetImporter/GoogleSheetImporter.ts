@@ -1,6 +1,6 @@
 import {ensureDirSync, writeJsonSync} from "fs-extra/esm";
 import {unlinkSync, writeFileSync} from "fs";
-import https from "http";
+import https from "https";
 import path from "path";
 import {parseString} from "@fast-csv/parse";
 
