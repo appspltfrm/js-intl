@@ -1,5 +1,5 @@
 import { HtmlString } from "@appspltfrm/js-utils/core";
-import IntlMessageFormat from "intl-messageformat";
+import { IntlMessageFormat } from "intl-messageformat";
 import { IntlContext } from "./IntlContext.js";
 export function formatMessage() {
     const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;

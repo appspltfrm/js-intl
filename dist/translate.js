@@ -1,5 +1,5 @@
 import { HtmlString } from "@appspltfrm/js-utils/core";
-import IntlMessageFormat from "intl-messageformat";
+import { IntlMessageFormat } from "intl-messageformat";
 import { DecimalFormatRef } from "./DecimalFormatRef.js";
 import { extractNamespaceAndKey } from "./extractNamespaceAndKey.js";
 import { formatDecimal } from "./formatDecimal.js";
