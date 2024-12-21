@@ -18,11 +18,14 @@
     "@appspltfrm/node-utils": "github:appspltfrm/node-utils",
     "@fast-csv/parse": "^5.0.0",
     "@formatjs/icu-messageformat-parser": "^2.9.0",
+    "@formatjs/intl-relativetimeformat": "^11.0.0",
     "fs-extra": "^11.0.0",
     "yargs": "^17.0.0"
   },
+  "optionalDependencies": {
+    "bignumber.js": "^9.0.0"
+  },
   "peerDependencies": {
-    "@formatjs/intl-relativetimeformat": "^11.0.0",
     "bignumber.js": "^9.0.0",
     "tslib": "^2.8.0"
   },
