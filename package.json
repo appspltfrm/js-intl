@@ -11,7 +11,7 @@
     "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
   },
   "bin": {
-    "js-intl-google-sheet-importer": "./dist/GoogleSheetImporter/cli.js"
+    "js-intl-google-sheet-importer": "./GoogleSheetImporter/cli.js"
   },
   "dependencies": {
     "@appspltfrm/js-utils": "github:appspltfrm/js-utils",
