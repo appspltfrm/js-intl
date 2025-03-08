@@ -32,6 +32,7 @@ export { insertGlobalValuesVersion } from "./insertGlobalValuesVersion.js";
 export { intl } from "./intl.js";
 export { setGlobalValues } from "./setGlobalValues.js";
 export { translate } from "./translate.js";
+export { getBrowserLocales } from "./getBrowserLocales.js";
 import { defineGlobals } from "./defineGlobals.js";
 defineGlobals();
 //# sourceMappingURL=public.js.map

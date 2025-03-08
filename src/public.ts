@@ -34,6 +34,7 @@ export {insertGlobalValuesVersion} from "./insertGlobalValuesVersion.js";
 export {intl} from "./intl.js";
 export {setGlobalValues} from "./setGlobalValues.js";
 export {translate, TranslateKeyType} from "./translate.js";
+export {getBrowserLocales} from "./getBrowserLocales.js";
 
 import {defineGlobals} from "./defineGlobals.js";
 
