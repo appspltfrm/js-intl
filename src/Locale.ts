@@ -14,6 +14,10 @@ export class Locale {
 
     static readonly jsonTypeName = "intl/Locale";
 
+    static languageLocales() {
+        return this._languages.map(c => new Locale(c)).sort();
+    }
+
     static fromJSON(json: any) {
 
         if (typeof json === "string" || (json && typeof json["code"] == "string")) {

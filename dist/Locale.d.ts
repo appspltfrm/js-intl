@@ -8,6 +8,7 @@ export declare class Locale {
     private static _codes;
     private static _languages;
     static readonly jsonTypeName = "intl/Locale";
+    static languageLocales(): Locale[];
     static fromJSON(json: any): Locale;
     constructor(code: string);
     readonly code: string;
