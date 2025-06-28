@@ -4,17 +4,11 @@ defineGlobals();
 
 export function bestLocale() {
 
-    if (typeof window === "undefined" || typeof window.navigator === "undefined") {
-        return INTL_DEFAULT_LOCALE;
-    }
-
-    let browserLocale: string = window.navigator["languages"] ? window.navigator["languages"][0] : undefined;
-    browserLocale = browserLocale || window.navigator.language || window.navigator["browserLanguage"] || window.navigator["userLanguage"];
-    browserLocale = browserLocale ? browserLocale.toLowerCase() : undefined;
+    let browserLocale = globalThis.navigator.language?.toLocaleLowerCase();
 
     let urlLocale: string;
 
-    const urlSegments = window.location.pathname.substring(1).split("/");
+    const urlSegments = globalThis.location?.pathname.substring(1).split("/");
 
     if (urlSegments.length >= (INTL_LOCALE_URL_PATH === true ? 1 : 2)) {
         if (INTL_LOCALE_URL_PATH === true) {
@@ -28,12 +22,12 @@ export function bestLocale() {
     }
 
     if (!urlLocale) {
-        let queryLocaleMatch = new RegExp('[?&]' + INTL_LOCALE_URL_PARAM + '=([^&]*)').exec(window.location.search);
+        let queryLocaleMatch = new RegExp('[?&]' + INTL_LOCALE_URL_PARAM + '=([^&]*)').exec(globalThis.location.search);
         urlLocale = queryLocaleMatch && decodeURIComponent(queryLocaleMatch[1].replace(/\+/g, ' ')).toLowerCase();
     }
 
     if (!urlLocale && INTL_LOCALE_STORAGE_KEY) {
-        urlLocale = (window.localStorage && window.localStorage.getItem(INTL_LOCALE_STORAGE_KEY)) || undefined;
+        urlLocale = (globalThis.localStorage && globalThis.localStorage.getItem(INTL_LOCALE_STORAGE_KEY)) || undefined;
     }
 
     let bestLocale: string;

@@ -217,7 +217,7 @@ export class IntlBundleGenerator {
                 if (jsType) {
                     contents.push("{var INTL_VALUES;");
                     contents.push("if(typeof window !== 'undefined'){INTL_VALUES=window['INTL_VALUES']=(window['INTL_VALUES']||{});}");
-                    contents.push("if(typeof global !== 'undefined'){INTL_VALUES=global['INTL_VALUES']=(global['INTL_VALUES']||{});}");
+                    contents.push("if(typeof globalThis !== 'undefined'){INTL_VALUES=globalThis['INTL_VALUES']=(globalThis['INTL_VALUES']||{});}");
                     contents.push("var values = " + JSON.stringify(values) + ";");
                     contents.push("for (var key0 in values) { INTL_VALUES[key0] = {}; for (var key1 in (values[key0] || {})) { INTL_VALUES[key0][key1] = values[key0][key1]; }}");
                     contents.push("}");
@@ -231,7 +231,7 @@ export class IntlBundleGenerator {
                 contents.unshift(
                     "{var INTL_POLYFILL=[];",
                     "if(typeof window !== 'undefined'){INTL_POLYFILL=window['INTL_POLYFILL']=(window['INTL_POLYFILL']||[]);}",
-                    "if(typeof global !== 'undefined'){INTL_POLYFILL=global['INTL_POLYFILL']=(global['INTL_POLYFILL']||[]);}",
+                    "if(typeof globalThis !== 'undefined'){INTL_POLYFILL=globalThis['INTL_POLYFILL']=(globalThis['INTL_POLYFILL']||[]);}",
                     "}"
                 );
             }
@@ -240,7 +240,7 @@ export class IntlBundleGenerator {
                 contents.unshift(
                     "{var INTL_RELATIVE_POLYFILL=[];",
                     "if(typeof window !== 'undefined'){INTL_RELATIVE_POLYFILL=window['INTL_RELATIVE_POLYFILL']=(window['INTL_RELATIVE_POLYFILL']||[]);}",
-                    "if(typeof global !== 'undefined'){INTL_RELATIVE_POLYFILL=global['INTL_RELATIVE_POLYFILL']=(global['INTL_RELATIVE_POLYFILL']||[]);}",
+                    "if(typeof globalThis !== 'undefined'){INTL_RELATIVE_POLYFILL=globalThis['INTL_RELATIVE_POLYFILL']=(globalThis['INTL_RELATIVE_POLYFILL']||[]);}",
                     "}"
                 );
             }
