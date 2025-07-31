@@ -2,10 +2,8 @@
   "name": "@appspltfrm/js-intl",
   "version": "2.0.0",
   "author": "Unipla",
-  "private": false,
   "type": "module",
   "scripts": {
-    "install": "node-utils-npm-install-dist",
     "build": "node-utils-file-system-glob-delete \"dist/**/*\" && npm run build:esm",
     "build:esm": "tsc --module esnext --target esnext --moduleResolution bundler --outDir dist/",
     "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
@@ -19,8 +17,8 @@
     "@fast-csv/parse": "^5.0.0",
     "@formatjs/icu-messageformat-parser": "^2.9.0",
     "@formatjs/intl-relativetimeformat": "^11.0.0",
-    "intl-messageformat": "^10.0.0",
     "fs-extra": "^11.0.0",
+    "intl-messageformat": "^10.0.0",
     "yargs": "^17.0.0"
   },
   "optionalDependencies": {
@@ -40,12 +38,12 @@
   },
   "exports": {
     ".": {
-      "types": "./public.d.ts",
-      "import": "./public.js"
+      "types": "./dist/public.d.ts",
+      "import": "./dist/public.js"
     },
     "./*": {
-      "types": "./*/public.d.ts",
-      "import": "./*/public.js"
+      "types": "./dist/*/public.d.ts",
+      "import": "./dist/*/public.js"
     },
     "./messages/*": {
       "default": "./messages/*.json"
@@ -68,5 +66,6 @@
       "module": "@appspltfrm/js-intl/locale",
       "namespace": "@umpirsky/locale-list"
     }
-  ]
+  ],
+  "packageManager": "yarn@4.9.2"
 }
