@@ -1,4 +1,4 @@
-import { BigNumber } from "bignumber.js";
+import BigNumber from "bignumber.js";
 import { Currency } from "./Currency.js";
 import { Money } from "./Money.js";
 export function formatNumber(context, mode, value, predefinedOptionsOrOptions, additionalOptions) {

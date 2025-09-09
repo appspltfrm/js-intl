@@ -1,5 +1,5 @@
 import {subtype, serialize} from "@appspltfrm/js-utils/json";
-import {BigNumber} from "bignumber.js";
+import BigNumber from "bignumber.js";
 import {IntlRef} from "./IntlRef.js";
 
 @subtype(IntlRef, "refType", "decimalFormat")

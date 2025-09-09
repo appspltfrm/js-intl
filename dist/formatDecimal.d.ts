@@ -1,4 +1,4 @@
-import { BigNumber } from "bignumber.js";
+import BigNumber from "bignumber.js";
 import { DecimalFormatRef } from "./DecimalFormatRef.js";
 import { IntlContext } from "./IntlContext.js";
 type ValueType = number | BigNumber | DecimalFormatRef;

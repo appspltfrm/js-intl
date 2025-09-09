@@ -1,5 +1,5 @@
 import {DateTimezone, HtmlString, Timestamp, TimeZoneDate} from "@appspltfrm/js-utils/core";
-import {BigNumber} from "bignumber.js";
+import BigNumber from "bignumber.js";
 import {CurrencyAndNumber} from "./CurrencyAndNumber.js";
 import {DecimalFormatRef} from "./DecimalFormatRef.js";
 import {defineGlobals} from "./defineGlobals.js";

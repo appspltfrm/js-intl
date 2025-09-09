@@ -1,4 +1,4 @@
-import {BigNumber} from "bignumber.js";
+import BigNumber from "bignumber.js";
 import {Currency} from "./Currency.js";
 
 function toBigNumber(value: number | BigNumber | string | any): BigNumber {

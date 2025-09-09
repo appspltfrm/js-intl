@@ -1,4 +1,4 @@
-import {BigNumber} from "bignumber.js";
+import BigNumber from "bignumber.js";
 import {Currency} from "./Currency.js";
 import {CurrencyAndNumber} from "./CurrencyAndNumber.js";
 import {IntlContext} from "./IntlContext.js";

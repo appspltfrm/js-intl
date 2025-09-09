@@ -1,4 +1,4 @@
-import {BigNumber} from "bignumber.js";
+import BigNumber from "bignumber.js";
 import {DecimalFormatRef} from "./DecimalFormatRef.js";
 import {defineGlobals} from "./defineGlobals.js";
 import {formatNumber} from "./formatNumber.js";
