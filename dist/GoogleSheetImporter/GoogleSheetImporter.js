@@ -1,3 +1,4 @@
+import { serialize, unserialize } from "@appspltfrm/js-utils/json";
 import { ensureDirSync, writeJsonSync } from "fs-extra/esm";
 import { unlinkSync, writeFileSync } from "fs";
 import https from "https";
@@ -32,7 +33,7 @@ export class GoogleSheetImporter {
             if (this.locales && this.defaultLocale) {
                 for (const locale of this.locales) {
                     if (!data[locale]) {
-                        data[locale] = data[this.defaultLocale];
+                        data[locale] = unserialize(serialize(data[this.defaultLocale]));
                     }
                 }
             }
