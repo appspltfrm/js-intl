@@ -16,6 +16,8 @@
     "No data to be displayed": "Es werden keine Daten angezeigt",
     "Ok": "OK",
     "Processing the data...": "Daten verarbeiten...",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {# Punkt} other {# Punkte}}",
+    "ptsCurrencyName": "Punkte",
     "Redo": "Wiederholen",
     "Save|command": "Speichern",
     "Search": "Suchen",

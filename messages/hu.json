@@ -16,6 +16,8 @@
     "No data to be displayed": "Nincs megjelenítendő adat",
     "Ok": "OK",
     "Processing the data...": "Az adatok feldolgozása ...",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {# pont} other {# pontot}}",
+    "ptsCurrencyName": "pontot",
     "Redo": "Redo",
     "Save|command": "Mentés",
     "Search": "Keresés",

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node-utils-file-system-glob-delete \"dist/**/*\" && npm run build:esm",
     "build:esm": "tsc --module esnext --target esnext --moduleResolution bundler --outDir dist/",
-    "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
+    "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --defaultLocale en --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
   },
   "bin": {
     "js-intl-google-sheet-importer": "./GoogleSheetImporter/cli.js"

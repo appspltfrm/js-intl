@@ -1,7 +1,7 @@
 {
     "Ok": "OK",
-    "ptsCurrencyFormattedAmount": "{amount, plural, one {# punto} other {# puntos}}",
-    "ptsCurrencyName": "puntos",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {# punct} few {# puncte} other {# puncte}}",
+    "ptsCurrencyName": "puncte",
     "validation/invalidValueError": "The value is invalid.",
     "validation/minLengthError": "{length, plural, =0 {The value has too few characters.} =1 {The value must have at least one character.} other {The value must contain at least # characters.}}",
     "validation/requiredError": "The value is required."

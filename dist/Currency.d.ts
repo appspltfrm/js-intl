@@ -1,7 +1,6 @@
 export declare class Currency {
-    private static _codes;
     static readonly jsonTypeName = "intl/Currency";
-    static codes(): string[];
+    static readonly PTS = "PTS";
     static fromJSON(json: any): Currency;
     constructor(code: string);
     readonly code: string;

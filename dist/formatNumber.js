@@ -1,5 +1,7 @@
 import BigNumber from "bignumber.js";
 import { Currency } from "./Currency.js";
+import { formatMessage } from "./formatMessage.js";
+import { getValue } from "./getValue.js";
 import { Money } from "./Money.js";
 export function formatNumber(context, mode, value, predefinedOptionsOrOptions, additionalOptions) {
     const options = Object.assign({}, typeof predefinedOptionsOrOptions === "string" ? context.findPredefinedFormatOptions(predefinedOptionsOrOptions) : predefinedOptionsOrOptions, additionalOptions);
@@ -37,6 +39,12 @@ export function formatNumber(context, mode, value, predefinedOptionsOrOptions, a
             value = value[1];
         }
     }
-    return new Intl.NumberFormat(context.locales, options).format(value);
+    const format = new Intl.NumberFormat(context.locales, options);
+    if (options.currency === Currency.PTS && options.style === "currency" && options.currencyDisplay === "name") {
+        options.currency = undefined;
+        options.style = "decimal";
+        return formatMessage(context, getValue(context, "@appspltfrm/js-intl#ptsCurrencyFormattedAmount"), { amount: value }, { number: options });
+    }
+    return format.format(value);
 }
 //# sourceMappingURL=formatNumber.js.map

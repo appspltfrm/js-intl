@@ -16,6 +16,8 @@
     "No data to be displayed": "Žádná data k zobrazení",
     "Ok": "OK",
     "Processing the data...": "Zpracování dat...",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {# bod} few {# body} other {# bodů}}",
+    "ptsCurrencyName": "body",
     "Save|command": "Uložit",
     "Search": "Hledat",
     "Search for...": "Vyhledat...",
