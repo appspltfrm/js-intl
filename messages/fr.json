@@ -17,7 +17,6 @@
     "Ok": "OK",
     "Processing the data...": "Traitement des données...",
     "ptsCurrencyFormattedAmount": "{amount, plural, one {# point} other {# points}}",
-    "ptsCurrencyName": "points",
     "Redo": "Refaire",
     "Save|command": "Enregistrer",
     "Search": "Recherche",
