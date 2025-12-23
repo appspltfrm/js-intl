@@ -16,7 +16,7 @@
     "No data to be displayed": "Geen gegevens om weer te geven",
     "Ok": "OK",
     "Processing the data...": "Verwerking van de gegevens...",
-    "ptsCurrencyFormattedAmount": "{amount, plural, one {# punt} other {# punten}}",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {{amount, number, decimal} punt} other {{amount, number, decimal} punten}}",
     "Redo": "Opnieuw doen",
     "Save|command": "Opslaan",
     "Search": "Zoeken",

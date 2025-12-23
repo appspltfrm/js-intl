@@ -16,7 +16,7 @@
     "No data to be displayed": "Ingen data skal vises",
     "Ok": "OK",
     "Processing the data...": "Behandling af data...",
-    "ptsCurrencyFormattedAmount": "{amount, plural, one {# point} other {# point}}",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {{amount, number, decimal} point} other {{amount, number, decimal} point}}",
     "Redo": "Gentag igen",
     "Save|command": "Gem kommando",
     "Search": "Søg",

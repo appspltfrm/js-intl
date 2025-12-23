@@ -55,7 +55,7 @@ export function formatNumber(context: IntlContext, mode: NumberFormatType, value
     if (options.currency === Currency.PTS && options.style === "currency" && options.currencyDisplay === "name") {
         options.currency = undefined;
         options.style = "decimal";
-        return formatMessage(context, getValue(context, "@appspltfrm/js-intl#ptsCurrencyFormattedAmount") as string, {amount: value as number}, {number: options});
+        return formatMessage(context, getValue(context, "@appspltfrm/js-intl#ptsCurrencyFormattedAmount") as string, {amount: value as number}, {number: {decimal: options}});
     }
 
     return format.format(value as number);

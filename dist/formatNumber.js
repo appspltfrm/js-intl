@@ -43,7 +43,7 @@ export function formatNumber(context, mode, value, predefinedOptionsOrOptions, a
     if (options.currency === Currency.PTS && options.style === "currency" && options.currencyDisplay === "name") {
         options.currency = undefined;
         options.style = "decimal";
-        return formatMessage(context, getValue(context, "@appspltfrm/js-intl#ptsCurrencyFormattedAmount"), { amount: value }, { number: options });
+        return formatMessage(context, getValue(context, "@appspltfrm/js-intl#ptsCurrencyFormattedAmount"), { amount: value }, { number: { decimal: options } });
     }
     return format.format(value);
 }

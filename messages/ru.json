@@ -16,7 +16,7 @@
     "No data to be displayed": "Нет данных для отображения",
     "Ok": "OK",
     "Processing the data...": "Обработка данных ...",
-    "ptsCurrencyFormattedAmount": "{amount, plural, one {# очко} few {# очка} many {# очков} other {# очков}}",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {{amount, number, decimal} очко} few {{amount, number, decimal} очка} many {{amount, number, decimal} очков} other {{amount, number, decimal} очков}}",
     "Redo": "Повторить",
     "Save|command": "Сохранить",
     "Search": "Поиск | команда",

@@ -16,7 +16,7 @@
     "No data to be displayed": "Nu sunt date de afișat",
     "Ok": "OK",
     "Processing the data...": "Se procesează datele...",
-    "ptsCurrencyFormattedAmount": "{amount, plural, one {# punct} few {# puncte} other {# puncte}}",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {{amount, number, decimal} punct} few {{amount, number, decimal} puncte} other {{amount, number, decimal} puncte}}",
     "Redo": "Refacere",
     "Save|command": "Salvare",
     "Search": "Căutare",

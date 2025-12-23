@@ -16,7 +16,7 @@
     "No data to be displayed": "Žádná data k zobrazení",
     "Ok": "OK",
     "Processing the data...": "Zpracování dat...",
-    "ptsCurrencyFormattedAmount": "{amount, plural, one {# bod} few {# body} other {# bodů}}",
+    "ptsCurrencyFormattedAmount": "{amount, plural, one {{amount, number, decimal} bod} few {{amount, number, decimal} body} other {{amount, number, decimal} bodů}}",
     "Redo": "Znovu",
     "Save|command": "Uložit",
     "Search": "Hledat",
