@@ -47,7 +47,7 @@
       "import": "./dist/*/public.js"
     },
     "./messages/*": {
-      "default": "./messages/*.json"
+      "default": "./messages/*"
     }
   },
   "intlBundleItems": [
