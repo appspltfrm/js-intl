@@ -1,6 +1,9 @@
 {
     "Ok": "OK",
-    "ptsCurrencyFormattedAmount": "{amount, plural, one {{amount, number, decimal} point} other {{amount, number, decimal} points}}",
+    "pcsCurrencyLongFormattedAmount": "{amount, plural, one {{amount, number, decimal} piece} other {{amount, number, decimal} pieces}}",
+    "pcsCurrencyShortFormattedAmount": "{amount, number, decimal} pcs",
+    "ptsCurrencyLongFormattedAmount": "{amount, plural, one {{amount, number, decimal} point} other {{amount, number, decimal} points}}",
+    "ptsCurrencyShortFormattedAmount": "{amount, number, decimal} pts",
     "validation/invalidValueError": "The value is invalid.",
     "validation/minLengthError": "{length, plural, =0 {The value has too few characters.} =1 {The value must have at least one character.} other {The value must contain at least # characters.}}",
     "validation/requiredError": "The value is required."
