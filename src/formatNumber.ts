@@ -53,8 +53,6 @@ export function formatNumber(context: IntlContext, mode: NumberFormatType, value
     const format = new Intl.NumberFormat(context.locales, options);
 
     if ((options.currency === Currency.PTS || options.currency === Currency.PCS) && options.style === "currency" && options.currencyDisplay && options.currencyDisplay !== "code") {
-        options.currency = undefined;
-        options.style = "decimal";
 
         let message: string | undefined;
         if (options.currency === Currency.PTS) {
@@ -62,6 +60,9 @@ export function formatNumber(context: IntlContext, mode: NumberFormatType, value
         } else {
             message = options.currencyDisplay === "name" ? getValue(context, "@appspltfrm/js-intl#pcsCurrencyLongFormattedAmount") as string : getValue(context, "@appspltfrm/js-intl#pcsCurrencyShortFormattedAmount") as string;
         }
+
+        options.currency = undefined;
+        options.style = "decimal";
 
         return formatMessage(context, message, {amount: value as number}, {number: {decimal: options}});
     }
