@@ -40,10 +40,17 @@ export function formatNumber(context, mode, value, predefinedOptionsOrOptions, a
         }
     }
     const format = new Intl.NumberFormat(context.locales, options);
-    if (options.currency === Currency.PTS && options.style === "currency" && options.currencyDisplay === "name") {
+    if ((options.currency === Currency.PTS || options.currency === Currency.PCS) && options.style === "currency" && options.currencyDisplay && options.currencyDisplay !== "code") {
         options.currency = undefined;
         options.style = "decimal";
-        return formatMessage(context, getValue(context, "@appspltfrm/js-intl#ptsCurrencyFormattedAmount"), { amount: value }, { number: { decimal: options } });
+        let message;
+        if (options.currency === Currency.PTS) {
+            message = options.currencyDisplay === "name" ? getValue(context, "@appspltfrm/js-intl#ptsCurrencyLongFormattedAmount") : getValue(context, "@appspltfrm/js-intl#ptsCurrencyShortFormattedAmount");
+        }
+        else {
+            message = options.currencyDisplay === "name" ? getValue(context, "@appspltfrm/js-intl#pcsCurrencyLongFormattedAmount") : getValue(context, "@appspltfrm/js-intl#pcsCurrencyShortFormattedAmount");
+        }
+        return formatMessage(context, message, { amount: value }, { number: { decimal: options } });
     }
     return format.format(value);
 }

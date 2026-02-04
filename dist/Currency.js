@@ -1,6 +1,7 @@
 export class Currency {
     static jsonTypeName = "intl/Currency";
     static PTS = "PTS";
+    static PCS = "PCS";
     static fromJSON(json) {
         if (typeof json === "string") {
             return new Currency(json);
