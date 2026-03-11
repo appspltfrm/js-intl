@@ -1,12 +1,13 @@
 {
   "name": "@appspltfrm/js-intl",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Unipla",
   "type": "module",
   "scripts": {
     "build": "node-utils-file-system-glob-delete \"dist/**/*\" && npm run build:esm",
     "build:esm": "tsc --module esnext --target esnext --moduleResolution bundler --outDir dist/",
-    "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --defaultLocale en --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl"
+    "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --defaultLocale en --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl",
+    "release": "../../releases/release.mjs js-intl"
   },
   "bin": {
     "js-intl-google-sheet-importer": "./dist/GoogleSheetImporter/cli.js"
@@ -32,19 +33,20 @@
     "@types/fs-extra": "^11.0.0",
     "@types/node": "^20.0.0",
     "@types/yargs": "^17.0.0",
-    "rollup": "^4.25.0",
     "tslib": "^2.8.1",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.9.3"
   },
   "exports": {
     ".": {
       "types": "./dist/public.d.ts",
-      "import": "./dist/public.js"
+      "import": "./dist/public.js",
+      "development": "./src/public.ts"
     },
     "./*": {
       "types": "./dist/*/public.d.ts",
-      "import": "./dist/*/public.js"
+      "import": "./dist/*/public.js",
+      "development": "./src/*/public.ts"
     },
     "./messages/*": {
       "default": "./messages/*"
@@ -67,6 +69,5 @@
       "module": "@appspltfrm/js-intl/locale",
       "namespace": "@umpirsky/locale-list"
     }
-  ],
-  "packageManager": "yarn@4.9.2"
+  ]
 }

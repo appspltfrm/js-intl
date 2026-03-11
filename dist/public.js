@@ -35,5 +35,6 @@ export { intl } from "./intl.js";
 export { setGlobalValues } from "./setGlobalValues.js";
 export { translate } from "./translate.js";
 import { defineGlobals } from "./defineGlobals.js";
+export { getIntlContext, setIntlContextGetter } from "./getIntlContext.js";
 defineGlobals();
 //# sourceMappingURL=public.js.map

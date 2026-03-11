@@ -1,6 +1,0 @@
-node_modules
-.idea/*
-!.idea/.name
-.tmp/
-.DS_Store
-.yarn/

@@ -37,5 +37,6 @@ export {intl} from "./intl.js";
 export {setGlobalValues} from "./setGlobalValues.js";
 export {translate, TranslateKeyType} from "./translate.js";
 import {defineGlobals} from "./defineGlobals.js";
+export {getIntlContext, setIntlContextGetter} from "./getIntlContext.js";
 
 defineGlobals();
