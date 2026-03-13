@@ -13,7 +13,7 @@ export class MessageRef extends IntlRef {
             if (namespaceKey.length >= 2) {
                 return new MessageRef(namespaceKey[0], namespaceKey[1]);
             } else {
-                return new MessageRef(undefined, json);
+                return new MessageRef(undefined!, json);
             }
 
         } else if (Array.isArray(json) && json.length > 0) {
@@ -55,7 +55,7 @@ export class MessageRef extends IntlRef {
         }
     }
 
-    readonly namespace: string;
+    readonly namespace!: string;
     readonly key: string;
     readonly values?: {[key: string]: any};
     readonly formats?: any;

@@ -6,7 +6,7 @@ export function bestLocale() {
 
     let browserLocale = globalThis.navigator.language?.toLocaleLowerCase();
 
-    let urlLocale: string;
+    let urlLocale: string | undefined;
 
     const urlSegments = globalThis.location?.pathname.substring(1).split("/");
 
@@ -23,18 +23,18 @@ export function bestLocale() {
 
     if (!urlLocale) {
         let queryLocaleMatch = new RegExp('[?&]' + INTL_LOCALE_URL_PARAM + '=([^&]*)').exec(globalThis.location.search);
-        urlLocale = queryLocaleMatch && decodeURIComponent(queryLocaleMatch[1].replace(/\+/g, ' ')).toLowerCase();
+        urlLocale = queryLocaleMatch ? decodeURIComponent(queryLocaleMatch[1].replace(/\+/g, ' ')).toLowerCase() : undefined;
     }
 
     if (!urlLocale && INTL_LOCALE_STORAGE_KEY) {
         urlLocale = (globalThis.localStorage && globalThis.localStorage.getItem(INTL_LOCALE_STORAGE_KEY)) || undefined;
     }
 
-    let bestLocale: string;
+    let bestLocale: string | undefined;
 
     if (browserLocale || urlLocale) {
 
-        let bestLocaleRanking: number;
+        let bestLocaleRanking = 0;
         let supported = INTL_SUPPORTED_LOCALE;
 
         for (const l of (typeof supported == "string" ? supported.split(",") : supported)) {

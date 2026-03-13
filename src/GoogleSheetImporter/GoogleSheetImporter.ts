@@ -16,13 +16,13 @@ export class GoogleSheetImporter {
         this.documents.push({id: id, worksheet: worksheet, filterTags: filterTags});
     }
 
-    public outputPath: string;
+    public outputPath?: string;
 
     public outputType: "json" | "ts" = "json";
 
-    public defaultLocale: string;
+    public defaultLocale?: string;
 
-    public locales: string[];
+    public locales?: string[];
 
     public async generate() {
 
@@ -56,11 +56,11 @@ export class GoogleSheetImporter {
             }
         }
 
-        ensureDirSync(this.outputPath);
+        ensureDirSync(this.outputPath!);
 
         for (const locale in data) {
 
-            const filePath = path.resolve(this.outputPath, `${locale}.${this.outputType}`);
+            const filePath = path.resolve(this.outputPath!, `${locale}.${this.outputType}`);
 
             if (!Object.keys(data[locale]).length) {
 
@@ -161,9 +161,9 @@ export class GoogleSheetImporter {
             let contents = "";
             https.get(url, (response) => {
 
-                if (response.statusCode >= 301 && response.statusCode <= 308) {
+                if (response.statusCode! >= 301 && response.statusCode! <= 308) {
                     try {
-                        resolve(this.fetchHttps(response.headers.location));
+                        resolve(this.fetchHttps(response.headers.location!));
                     } catch (e) {
                         reject(e);
                     } finally {
@@ -184,9 +184,9 @@ export class GoogleSheetImporter {
             const data: {[locale: string]: LocaleDictionary} = {};
 
             parseString(await this.fetchHttps(`https://docs.google.com/spreadsheets/d/e/${document.id}/pub?output=csv&${document.worksheet ? `&gid=${document.worksheet}&single=true` : ""}`), {headers: true})
-                .on("error", err => reject(err))
+                .on("error", (err: any) => reject(err))
                 .on("end", () => resolve(data))
-                .on("data", row => {
+                .on("data", (row: any) => {
 
                     if (row.key) {
 
@@ -405,8 +405,8 @@ export class GoogleSheetImporter {
 
 interface GoogleSheet {
     id: string;
-    worksheet: string;
-    filterTags: string[];
+    worksheet?: string;
+    filterTags?: string[];
 }
 
 interface LocaleDictionary {

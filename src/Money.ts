@@ -49,13 +49,13 @@ export class Money {
 
         } else if (currencyOrPrototype) {
             this.amount = toBigNumber(currencyOrPrototype.amount);
-            this.currency = currencyOrPrototype.currency instanceof Currency ? currencyOrPrototype.currency : new Currency(currencyOrPrototype.currency);
+            this.currency = currencyOrPrototype.currency instanceof Currency ? currencyOrPrototype.currency : new Currency(currencyOrPrototype.currency as unknown as string);
         }
     }
 
-    readonly currency: Currency;
+    readonly currency!: Currency;
 
-    readonly amount: BigNumber;
+    readonly amount!: BigNumber;
 
     plus(amount: BigNumber | number | string): Money {
         return new Money(this.currency, this.amount.plus(amount));
@@ -82,9 +82,9 @@ export class Money {
     }
 
     compareTo(money: Money | BigNumber | number): number {
-        if (typeof money === "number") return this.amount.comparedTo(money);
-        else if (money instanceof BigNumber) return this.amount.comparedTo(money);
-        else if (money) return this.amount.comparedTo(money.amount);
+        if (typeof money === "number") return this.amount.comparedTo(money)!;
+        else if (money instanceof BigNumber) return this.amount.comparedTo(money)!;
+        else if (money) return this.amount.comparedTo(money.amount)!;
         else throw new Error("Cannot compare empty value");
     }
 

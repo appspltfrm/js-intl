@@ -40,7 +40,7 @@ export class CurrencyCalculator {
 
 	protected rates: ExchangeRate[] = [];
 
-	private getRate(currency: Currency): ExchangeRate {
+	private getRate(currency: Currency): ExchangeRate | undefined {
         for (let r of this.rates) {
             if (r.currency.code == currency.code) {
                 return r;
@@ -60,7 +60,7 @@ export class CurrencyCalculator {
 
         let amountValue: BigNumber = amount instanceof Money ? amount.amount : amount;
         let fromCurrency: Currency = amount instanceof Money ? amount.currency : from;
-        let toCurrency: Currency = amount instanceof Money ? from : to;
+        let toCurrency: Currency = amount instanceof Money ? from : to!;
 
         if (fromCurrency.code == toCurrency.code) {
             return amount;
@@ -92,7 +92,7 @@ export class CurrencyCalculator {
             return amount;
         }
 
-        let er = this.getRate(fromCurrency);
+        const er = this.getRate(fromCurrency)!;
 
         return er.rate.dividedBy(er.amount).times(amount);
     }

@@ -1,4 +1,4 @@
-export function bestRelativeTimeFormatValue(from: Date | number, to: Date | number = Date.now(), thresholds = DEFAULT_THRESHOLDS): {value: number; unit: Intl.RelativeTimeFormatUnit} {
+export function bestRelativeTimeFormatValue(from: Date | number, to: Date | number = Date.now(), thresholds = DEFAULT_THRESHOLDS): {value: number; unit: Intl.RelativeTimeFormatUnit} | undefined {
 
     const dateDiff = new DateDiff(from, to);
 

@@ -5,7 +5,7 @@ import {MessageRef} from "./MessageRef.js";
 import {ValueKey} from "./ValueKey.js";
 import {ValueRef} from "./ValueRef.js";
 
-export function getValue<T extends string | number = string>(context: IntlContext, key: ValueKey | MessageRef | ValueRef): T {
+export function getValue<T extends string | number = string>(context: IntlContext, key: ValueKey | MessageRef | ValueRef): T | undefined {
 
     const namespaceAndKey = extractNamespaceAndKey(key, context.defaultNamespace);
     if (!namespaceAndKey.namespace) {

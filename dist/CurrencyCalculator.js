@@ -61,7 +61,7 @@ export class CurrencyCalculator {
         if (this.baseCurrency.code == fromCurrency.code) {
             return amount;
         }
-        let er = this.getRate(fromCurrency);
+        const er = this.getRate(fromCurrency);
         return er.rate.dividedBy(er.amount).times(amount);
     }
 }

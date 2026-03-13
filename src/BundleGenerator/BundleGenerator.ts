@@ -47,7 +47,7 @@ export class IntlBundleGenerator {
 
                 if (input === "intl" || input === "@formatjs/intl-relativetimeformat") {
 
-                    for (const nodeModulesPath of this.nodeModulesPath ? [this.nodeModulesPath] : require.main.paths) {
+                    for (const nodeModulesPath of this.nodeModulesPath ? [this.nodeModulesPath] : require.main!.paths) {
                         if (existsSync(path.resolve(nodeModulesPath, input))) {
 
                             if (input === "intl") {
@@ -63,7 +63,7 @@ export class IntlBundleGenerator {
 
                 const segments = input.split("/");
 
-                for (const nodeModulesPath of this.nodeModulesPath ? [this.nodeModulesPath] : require.main.paths) {
+                for (const nodeModulesPath of this.nodeModulesPath ? [this.nodeModulesPath] : require.main!.paths) {
 
                     if (existsSync(nodeModulesPath)) {
 
@@ -108,7 +108,7 @@ export class IntlBundleGenerator {
 
     private readonly items: IntlBundleItem[];
 
-    private readonly nodeModulesPath: string;
+    private readonly nodeModulesPath: string | undefined;
 
     public generate() {
 
@@ -150,11 +150,11 @@ export class IntlBundleGenerator {
                         }
                     }
 
-                    let itemPath: string;
+                    let itemPath: string | undefined;
 
                     if (item.path.startsWith("{{NODE_MODULES}}")) {
 
-                        for (const nodeModulesPath of this.nodeModulesPath ? [this.nodeModulesPath] : require.main.paths) {
+                        for (const nodeModulesPath of this.nodeModulesPath ? [this.nodeModulesPath] : require.main!.paths) {
                             itemPath = resolveItemPath(item.path.replace("{{NODE_MODULES}}", nodeModulesPath));
                             if (itemPath) {
                                 break;
@@ -172,12 +172,12 @@ export class IntlBundleGenerator {
                                 values = {};
                             }
 
-                            if (!values[item.namespace]) {
-                                values[item.namespace] = {};
+                            if (!values[item.namespace!]) {
+                                values[item.namespace!] = {};
                             }
 
-                            if (!values[item.namespace][baseLocale]) {
-                                values[item.namespace][baseLocale] = {};
+                            if (!values[item.namespace!][baseLocale]) {
+                                values[item.namespace!][baseLocale] = {};
                             }
 
                             let json = readJsonSync(itemPath);
@@ -189,7 +189,7 @@ export class IntlBundleGenerator {
                                 }
                             }
 
-                            Object.assign(values[item.namespace][baseLocale], json);
+                            Object.assign(values[item.namespace!][baseLocale], json);
 
                         } else {
                             let c = readFileSync(itemPath).toString();

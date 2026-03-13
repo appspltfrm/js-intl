@@ -26,9 +26,9 @@ function loadPolyfillsLocale() {
         INTL_POLYFILL = [];
     }
 
-    if (INTL_RELATIVE_POLYFILL && INTL_RELATIVE_POLYFILL.length && Intl["RelativeTimeFormat"] && Intl["RelativeTimeFormat"]["__addLocaleData"]) {
+    if (INTL_RELATIVE_POLYFILL && INTL_RELATIVE_POLYFILL.length && Intl["RelativeTimeFormat"] && (Intl["RelativeTimeFormat"] as any)["__addLocaleData"]) {
         for (const a of INTL_RELATIVE_POLYFILL) {
-            Intl["RelativeTimeFormat"]["__addLocaleData"](a);
+            (Intl["RelativeTimeFormat"] as any)["__addLocaleData"](a);
         }
 
         INTL_RELATIVE_POLYFILL = [];
@@ -42,8 +42,8 @@ export class IntlHelper extends IntlContext {
     constructor(defaultLocale?: string, defaultNamespace?: string) {
         super();
 
-        this.locale = defaultLocale;
-        this.defaultNamespace$ = defaultNamespace;
+        this.locale = defaultLocale!;
+        this.defaultNamespace$ = defaultNamespace!;
 
         loadPolyfillsLocale();
     }
@@ -78,7 +78,7 @@ export class IntlHelper extends IntlContext {
     /**
      * Selected locale. By default it takes browser locale.
      */
-    private _locale: string;
+    private _locale!: string;
 
     public get locale(): string {
         return this._locale;
@@ -104,7 +104,7 @@ export class IntlHelper extends IntlContext {
     /**
      * Selected locale's segments
      */
-    private _locales: string[];
+    private _locales!: string[];
 
     public get locales(): string[] {
 
@@ -115,7 +115,7 @@ export class IntlHelper extends IntlContext {
         return [];
     }
 
-    public value<T = string>(value: IntlStore<T>): T {
+    public value<T = string>(value: IntlStore<T>): T | undefined {
 
         if (!value) {
             return;
@@ -169,9 +169,9 @@ export class IntlHelper extends IntlContext {
         return formatTimeOrDateOrDateTime(this, "dateTime", dateTime, predefinedOptionsOrOptions, options);
     }
 
-    currencyFormat(value: Money | CurrencyAndNumber, predefinedOptions: string, additionalOptions?: Intl.NumberFormatOptions);
+    currencyFormat(value: Money | CurrencyAndNumber, predefinedOptions: string, additionalOptions?: Intl.NumberFormatOptions): string;
 
-    currencyFormat(value: Money | CurrencyAndNumber, options?: Intl.NumberFormatOptions);
+    currencyFormat(value: Money | CurrencyAndNumber, options?: Intl.NumberFormatOptions): string;
 
     currencyFormat(value: Money | CurrencyAndNumber, predefinedOptionsOrOptions?: string | Intl.NumberFormatOptions, additionalOptions?: Intl.NumberFormatOptions) {
         return formatNumber(this, "currency", value, predefinedOptionsOrOptions, additionalOptions);

@@ -13,7 +13,7 @@ export class ValueRef extends IntlRef {
             if (namespaceKey.length >= 2) {
                 return new ValueRef(namespaceKey[0], namespaceKey[1]);
             } else {
-                return new ValueRef(undefined, json);
+                return new ValueRef(undefined!, json);
             }
 
         } else if (Array.isArray(json) && json.length > 0) {
@@ -49,7 +49,7 @@ export class ValueRef extends IntlRef {
         }
     }
 
-    readonly namespace: string;
+    readonly namespace!: string;
     readonly key: string;
 
     toJSON() {

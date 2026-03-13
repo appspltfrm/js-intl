@@ -152,9 +152,9 @@ export class GoogleSheetImporter {
         return new Promise(async (resolve, reject) => {
             const data = {};
             parseString(await this.fetchHttps(`https://docs.google.com/spreadsheets/d/e/${document.id}/pub?output=csv&${document.worksheet ? `&gid=${document.worksheet}&single=true` : ""}`), { headers: true })
-                .on("error", err => reject(err))
+                .on("error", (err) => reject(err))
                 .on("end", () => resolve(data))
-                .on("data", row => {
+                .on("data", (row) => {
                 if (row.key) {
                     // filter by tags
                     TAGS: if (document.filterTags) {

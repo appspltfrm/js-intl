@@ -18,7 +18,7 @@ import {GoogleSheetImporter} from "./GoogleSheetImporter.js";
     const importer = new GoogleSheetImporter();
     importer.outputPath = argv["outputPath"];
     importer.outputType = argv["outputType"] as any;
-    importer.defaultLocale = argv["defaultLocale"];
+    importer.defaultLocale = argv["defaultLocale"]!;
 
     const documents: string[] = Array.isArray(argv["document"]) ? argv["document"] : [argv["document"]];
     const sheets = Array.isArray(argv["worksheet"]) ? argv["worksheet"] : [argv["worksheet"]];

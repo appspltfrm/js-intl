@@ -52,7 +52,7 @@ export function translate(): any {
 
     if (values) {
 
-        const fixedValues = {};
+        const fixedValues: any = {};
 
         for (const key of Object.keys(values)) {
             if (values[key] instanceof MessageRef) {

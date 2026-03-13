@@ -16,14 +16,14 @@ export function bestLocale() {
     }
     if (!urlLocale) {
         let queryLocaleMatch = new RegExp('[?&]' + INTL_LOCALE_URL_PARAM + '=([^&]*)').exec(globalThis.location.search);
-        urlLocale = queryLocaleMatch && decodeURIComponent(queryLocaleMatch[1].replace(/\+/g, ' ')).toLowerCase();
+        urlLocale = queryLocaleMatch ? decodeURIComponent(queryLocaleMatch[1].replace(/\+/g, ' ')).toLowerCase() : undefined;
     }
     if (!urlLocale && INTL_LOCALE_STORAGE_KEY) {
         urlLocale = (globalThis.localStorage && globalThis.localStorage.getItem(INTL_LOCALE_STORAGE_KEY)) || undefined;
     }
     let bestLocale;
     if (browserLocale || urlLocale) {
-        let bestLocaleRanking;
+        let bestLocaleRanking = 0;
         let supported = INTL_SUPPORTED_LOCALE;
         for (const l of (typeof supported == "string" ? supported.split(",") : supported)) {
             const s = l.toLowerCase();

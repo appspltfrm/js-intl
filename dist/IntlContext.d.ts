@@ -8,6 +8,6 @@ export declare abstract class IntlContext {
     /**
      * Path or url to a directory, where intl resources are stored.
      */
-    resourcesLocation: string;
+    resourcesLocation?: string;
     setResourcesLocation(location: string): void;
 }

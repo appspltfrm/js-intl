@@ -5,9 +5,9 @@ import {IntlContext} from "./IntlContext.js";
 type ValueType = number | Date | DateTimezone | TimeZoneDate | Timestamp;
 type PredefinedOptionsOrOptionsType = string | Intl.DateTimeFormatOptions;
 
-export function formatTime(value: ValueType, predefinedOptionsOrOptions?: PredefinedOptionsOrOptionsType, options?: Intl.DateTimeFormatOptions);
+export function formatTime(value: ValueType, predefinedOptionsOrOptions?: PredefinedOptionsOrOptionsType, options?: Intl.DateTimeFormatOptions): string;
 
-export function formatTime(context: IntlContext, value: ValueType, predefinedOptionsOrOptions?: PredefinedOptionsOrOptionsType, options?: Intl.DateTimeFormatOptions);
+export function formatTime(context: IntlContext, value: ValueType, predefinedOptionsOrOptions?: PredefinedOptionsOrOptionsType, options?: Intl.DateTimeFormatOptions): string;
 
 export function formatTime() {
 

@@ -7,9 +7,9 @@ defineGlobals();
 
 type ValueType = number | Date | DateTimezone | Timestamp;
 
-export function formatRelativeTime(value: ValueType, options?: any);
+export function formatRelativeTime(value: ValueType, options?: any): string;
 
-export function formatRelativeTime(context: IntlContext, value: ValueType, options?: any);
+export function formatRelativeTime(context: IntlContext, value: ValueType, options?: any): string;
 
 export function formatRelativeTime() {
 
@@ -30,6 +30,6 @@ export function formatRelativeTime() {
         value = new Date();
     }
 
-    const diff = bestRelativeTimeFormatValue(value as Date);
+    const diff = bestRelativeTimeFormatValue(value as Date)!;
     return new Intl.RelativeTimeFormat(context.locales, Object.assign({numeric: "auto"}, options)).format(diff.value, diff.unit);
 }

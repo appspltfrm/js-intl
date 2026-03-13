@@ -31,7 +31,7 @@ export declare class IntlHelper extends IntlContext {
      */
     private _locales;
     get locales(): string[];
-    value<T = string>(value: IntlStore<T>): T;
+    value<T = string>(value: IntlStore<T>): T | undefined;
     messageFormat(message: string, values: {
         [key: string]: any;
     }, formats?: any): string | HtmlString;
@@ -41,8 +41,8 @@ export declare class IntlHelper extends IntlContext {
     dateFormat(dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, options?: Intl.DateTimeFormatOptions): string;
     timeFormat(dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, options?: Intl.DateTimeFormatOptions): string;
     dateTimeFormat(dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, options?: Intl.DateTimeFormatOptions): string;
-    currencyFormat(value: Money | CurrencyAndNumber, predefinedOptions: string, additionalOptions?: Intl.NumberFormatOptions): any;
-    currencyFormat(value: Money | CurrencyAndNumber, options?: Intl.NumberFormatOptions): any;
-    decimalFormat(value: number | BigNumber | DecimalFormatRef, predefinedOptionsOrOptions?: string | Intl.NumberFormatOptions, additionalOptions?: Intl.NumberFormatOptions): any;
+    currencyFormat(value: Money | CurrencyAndNumber, predefinedOptions: string, additionalOptions?: Intl.NumberFormatOptions): string;
+    currencyFormat(value: Money | CurrencyAndNumber, options?: Intl.NumberFormatOptions): string;
+    decimalFormat(value: number | BigNumber | DecimalFormatRef, predefinedOptionsOrOptions?: string | Intl.NumberFormatOptions, additionalOptions?: Intl.NumberFormatOptions): string;
     percentFormat(value: number | BigNumber, predefinedOptionsOrOptions?: string | Intl.NumberFormatOptions, additionalOptions?: Intl.NumberFormatOptions): string;
 }

@@ -7,10 +7,10 @@ export interface IntlStore<V = string> {
 
 export namespace IntlObject {
 
-    export function value<V>(value: IntlStore<V>, locale?: string): V {
+    export function value<V>(value: IntlStore<V>, locale?: string): V | undefined {
 
         if (value) {
-            return value[locale];
+            return value[locale!];
         }
 
         return undefined;

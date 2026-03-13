@@ -1,6 +1,6 @@
 {
   "name": "@appspltfrm/js-intl",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Unipla",
   "type": "module",
   "scripts": {
@@ -39,14 +39,14 @@
   },
   "exports": {
     ".": {
+      "development": "./src/public.ts",
       "types": "./dist/public.d.ts",
-      "import": "./dist/public.js",
-      "development": "./src/public.ts"
+      "import": "./dist/public.js"
     },
     "./*": {
+      "development": "./src/*/public.ts",
       "types": "./dist/*/public.d.ts",
-      "import": "./dist/*/public.js",
-      "development": "./src/*/public.ts"
+      "import": "./dist/*/public.js"
     },
     "./messages/*": {
       "default": "./messages/*"

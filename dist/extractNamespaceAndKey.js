@@ -25,6 +25,6 @@ export function extractNamespaceAndKey(namespaceAndKey, defaultNamespace) {
             result.key = namespaceAndKey;
         }
     }
-    return result;
+    return { namespace: result.namespace, key: result.key };
 }
 //# sourceMappingURL=extractNamespaceAndKey.js.map

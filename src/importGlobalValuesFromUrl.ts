@@ -3,9 +3,9 @@ import {IntlContext} from "./IntlContext.js";
 
 const importedResources: string[] = [];
 
-export async function importGlobalValuesFromUrl(url: string);
+export async function importGlobalValuesFromUrl(url: string): Promise<void>;
 
-export async function importGlobalValuesFromUrl(context: IntlContext, url: string);
+export async function importGlobalValuesFromUrl(context: IntlContext, url: string): Promise<void>;
 
 export function importGlobalValuesFromUrl(): Promise<void> {
 
@@ -55,7 +55,7 @@ export function importGlobalValuesFromUrl(): Promise<void> {
 
                     resolve();
 
-                } catch (error) {
+                } catch (error: any) {
                     reject(new Error(error));
                 }
 

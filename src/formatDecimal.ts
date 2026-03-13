@@ -9,9 +9,9 @@ defineGlobals();
 type ValueType = number | BigNumber | DecimalFormatRef;
 type PredefinedOptionsType = string | Intl.NumberFormatOptions;
 
-export function formatDecimal(value: ValueType, predefinedOptionsOrOptions?: string | Intl.NumberFormatOptions, additionalOptions?: Intl.NumberFormatOptions);
+export function formatDecimal(value: ValueType, predefinedOptionsOrOptions?: string | Intl.NumberFormatOptions, additionalOptions?: Intl.NumberFormatOptions): string;
 
-export function formatDecimal(context: IntlContext, value: ValueType, predefinedOptionsOrOptions?: PredefinedOptionsType, additionalOptions?: Intl.NumberFormatOptions);
+export function formatDecimal(context: IntlContext, value: ValueType, predefinedOptionsOrOptions?: PredefinedOptionsType, additionalOptions?: Intl.NumberFormatOptions): string;
 
 export function formatDecimal() {
 

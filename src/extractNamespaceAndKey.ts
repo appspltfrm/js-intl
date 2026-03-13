@@ -1,9 +1,9 @@
 import {MessageRef} from "./MessageRef.js";
 import {ValueRef} from "./ValueRef.js";
 
-export function extractNamespaceAndKey(namespaceAndKey: string | MessageRef | ValueRef | [namespace: string, key: string], defaultNamespace?: string): {namespace: string, key: string} {
+export function extractNamespaceAndKey(namespaceAndKey: string | MessageRef | ValueRef | [namespace: string, key: string], defaultNamespace?: string): {namespace?: string, key: string} {
 
-    const result = {namespace: undefined, key: undefined};
+    const result: {namespace?: string, key?: string} = {namespace: undefined, key: undefined};
 
     if (namespaceAndKey instanceof MessageRef || namespaceAndKey instanceof ValueRef) {
         result.namespace = namespaceAndKey.namespace || defaultNamespace;
@@ -27,5 +27,5 @@ export function extractNamespaceAndKey(namespaceAndKey: string | MessageRef | Va
         }
     }
 
-    return result;
+    return {namespace: result.namespace, key: result.key};
 }

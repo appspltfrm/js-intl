@@ -1,10 +1,10 @@
 import {getGlobalValuesVersions} from "./getGlobalValuesVersions.js";
 
-export function deleteGlobalValuesVersion(versionName: string);
+export function deleteGlobalValuesVersion(versionName: string): void;
 
-export function deleteGlobalValuesVersion(versionName: string, namespace: string);
+export function deleteGlobalValuesVersion(versionName: string, namespace: string): void;
 
-export function deleteGlobalValuesVersion(versionName: string, namespace?: string) {
+export function deleteGlobalValuesVersion(versionName: string, namespace?: string): void {
     const versions = getGlobalValuesVersions();
 
     for (const ns in versions) {

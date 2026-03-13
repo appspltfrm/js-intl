@@ -14,7 +14,7 @@ export declare class IntlBundleGenerator {
     private options?;
     constructor(locales: string[], inputs: Array<IntlBundleItem | string>, outputFile: string, options?: {
         nodeModulesPath?: string;
-    });
+    } | undefined);
     private readonly items;
     private readonly nodeModulesPath;
     generate(): void;

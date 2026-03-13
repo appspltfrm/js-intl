@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "strict": true,
+        "isolatedModules": true,
         "allowSyntheticDefaultImports": true,
         "declaration": true,
         "esModuleInterop": true,
@@ -12,7 +14,8 @@
         "outDir": "dist",
         "rootDir": "src",
         "sourceMap": true,
-        "importHelpers": true
+        "importHelpers": true,
+        "customConditions": ["development"]
     },
 
     "exclude": [

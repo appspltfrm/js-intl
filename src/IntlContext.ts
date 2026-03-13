@@ -17,7 +17,7 @@ export abstract class IntlContext {
     /**
      * Path or url to a directory, where intl resources are stored.
      */
-    resourcesLocation: string;
+    resourcesLocation?: string;
 
     public setResourcesLocation(location: string) {
         this.resourcesLocation = location;
