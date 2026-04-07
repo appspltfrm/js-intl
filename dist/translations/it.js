@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Accedi`,
+        "signOut_cmd": `Esci`,
+        "switchToThisAccount_cmd": `Passa a questo account`,
+        "signInWithAnotherAccount_cmd": `Accedi con un altro account`,
+        "manageAccounts_cmd": `Gestisci account`,
     },
     "validation": {
         "invalidValue_err": `Il valore non è valido.`,

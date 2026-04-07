@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Prijavite se`,
+        "signOut_cmd": `Odjava`,
+        "switchToThisAccount_cmd": `Preklopi na ta račun`,
+        "signInWithAnotherAccount_cmd": `Vpiši se s drugim računom`,
+        "manageAccounts_cmd": `Upravljaj račune`,
     },
     "validation": {
         "invalidValue_err": `Vrednost ni veljavna.`,

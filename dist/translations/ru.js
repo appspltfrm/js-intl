@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Войти`,
+        "signOut_cmd": `Выйти`,
+        "switchToThisAccount_cmd": `Переключиться на этот аккаунт`,
+        "signInWithAnotherAccount_cmd": `Войти через другой аккаунт`,
+        "manageAccounts_cmd": `Управление аккаунтами`,
     },
     "validation": {
         "invalidValue_err": `Значение неверно.`,

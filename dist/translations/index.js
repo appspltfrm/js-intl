@@ -5,7 +5,6 @@ const importer = async (locale) => {
         case "da": return (await import("./da.js")).default;
         case "de": return (await import("./de.js")).default;
         case "el": return (await import("./el.js")).default;
-        case "en": return (await import("./en.js")).default;
         case "es": return (await import("./es.js")).default;
         case "fi": return (await import("./fi.js")).default;
         case "fr": return (await import("./fr.js")).default;
@@ -21,7 +20,7 @@ const importer = async (locale) => {
         case "sl": return (await import("./sl.js")).default;
         case "sv": return (await import("./sv.js")).default;
         case "uk": return (await import("./uk.js")).default;
-        default: return {};
+        default: return (await import("./en.js")).default;
     }
 };
 export default TranslationsCollection.defineCollection("shared", importer);

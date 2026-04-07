@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Conectare`,
+        "signOut_cmd": `Deconectare`,
+        "switchToThisAccount_cmd": `Comută la acest cont`,
+        "signInWithAnotherAccount_cmd": `Autentifică-te cu un alt cont`,
+        "manageAccounts_cmd": `Gestionează conturile`,
     },
     "validation": {
         "invalidValue_err": `Valoarea este invalidă.`,

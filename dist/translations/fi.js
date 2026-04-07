@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Kirjaudu sisään`,
+        "signOut_cmd": `Kirjaudu ulos`,
+        "switchToThisAccount_cmd": `Vaihda tähän tiliin`,
+        "signInWithAnotherAccount_cmd": `Kirjaudu toisella tilillä`,
+        "manageAccounts_cmd": `Hallitse tilejä`,
     },
     "validation": {
         "invalidValue_err": `Arvo ei ole kelvollinen.`,

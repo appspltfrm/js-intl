@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Aanmelden`,
+        "signOut_cmd": `Uitloggen`,
+        "switchToThisAccount_cmd": `Wissel naar dit account`,
+        "signInWithAnotherAccount_cmd": `Meld u aan met een ander account`,
+        "manageAccounts_cmd": `Accounts beheren`,
     },
     "validation": {
         "invalidValue_err": `De waarde is ongeldig.`,

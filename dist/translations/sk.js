@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Prijava`,
+        "signOut_cmd": `Odhlásiť sa`,
+        "switchToThisAccount_cmd": `Prepnúť sa na tento účet`,
+        "signInWithAnotherAccount_cmd": `Prihlásiť sa pomocou iného účtu`,
+        "manageAccounts_cmd": `Spravovať účty`,
     },
     "validation": {
         "invalidValue_err": `Wartość je nieprawidłowa.`,

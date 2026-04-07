@@ -1,12 +1,12 @@
-export var IntlObject;
-(function (IntlObject) {
+export var IntlStore;
+(function (IntlStore) {
     function value(value, locale) {
         if (value) {
             return value[locale];
         }
         return undefined;
     }
-    IntlObject.value = value;
+    IntlStore.value = value;
     function clone(value) {
         if (!value) {
             return value;
@@ -17,6 +17,6 @@ export var IntlObject;
         }
         return niu;
     }
-    IntlObject.clone = clone;
-})(IntlObject || (IntlObject = {}));
+    IntlStore.clone = clone;
+})(IntlStore || (IntlStore = {}));
 //# sourceMappingURL=IntlStore.js.map

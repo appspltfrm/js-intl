@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Bejelentkez`,
+        "signOut_cmd": `Kijelentkezés`,
+        "switchToThisAccount_cmd": `Átváltás erre a fiókra`,
+        "signInWithAnotherAccount_cmd": `Belépés másik fiókkal`,
+        "manageAccounts_cmd": `Fiókok kezelése`,
     },
     "validation": {
         "invalidValue_err": `Az érték érvénytelen.`,

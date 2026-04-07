@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Přihlásit se`,
+        "signOut_cmd": `Odhlásit se`,
+        "switchToThisAccount_cmd": `Přepnout na tento účet`,
+        "signInWithAnotherAccount_cmd": `Přihlásit se jiným účtem`,
+        "manageAccounts_cmd": `Spravovat účty`,
     },
     "validation": {
         "invalidValue_err": `Hodnota není platná.`,

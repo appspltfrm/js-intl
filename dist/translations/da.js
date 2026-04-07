@@ -34,6 +34,10 @@ export default {
     },
     "users": {
         "signIn_cmd": `Log ind`,
+        "signOut_cmd": `Log ud`,
+        "switchToThisAccount_cmd": `Skift til denne konto`,
+        "signInWithAnotherAccount_cmd": `Log ind med en anden konto`,
+        "manageAccounts_cmd": `Administrér konti`,
     },
     "validation": {
         "invalidValue_err": `Værdien er ugyldig.`,

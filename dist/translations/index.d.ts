@@ -21,8 +21,8 @@ type ItemsMap = {
         }, overrideFormats?: any) => string;
         /**
          * Formatowanie liczby sztuk (np. jakiejś rzeczy), ale słowo "sztuka" jest zastąpione
-wersję skróconą, czyli "szt.", chodzi o to, aby było zrozumiałe, ale zajmowało jak najmniej
-miejsca.
+    wersję skróconą, czyli "szt.", chodzi o to, aby było zrozumiałe, ale zajmowało jak najmniej
+    miejsca.
          *
          * @param vars.amount
          */
@@ -47,13 +47,13 @@ miejsca.
         "noDataToDisplay": () => string;
         /**
          * Bez względu jaki język, zawsze "OK", głównie do wyświetlania w oknach dialogowych jako
-potwierdzenie lub po prostu przycisk zamykający.
+    potwierdzenie lub po prostu przycisk zamykający.
          */
         "ok_lbl": () => string;
         "processingTheData_ing": () => string;
         /**
          * Komenda wyświetla w toolbarze edytora/inputu, która pozwala ponowić wycofaną operację.
-Tłumaczenie też ma tylko jedno słowo (o ile język na to pozwala), bez względu czego dotyczy redo/ponowienie.
+    Tłumaczenie też ma tylko jedno słowo (o ile język na to pozwala), bez względu czego dotyczy redo/ponowienie.
          */
         "redo_cmd": () => string;
         "save_cmd": () => string;
@@ -65,6 +65,10 @@ Tłumaczenie też ma tylko jedno słowo (o ile język na to pozwala), bez wzglę
     };
     "users": {
         "signIn_cmd": () => string;
+        "signOut_cmd": () => string;
+        "switchToThisAccount_cmd": () => string;
+        "signInWithAnotherAccount_cmd": () => string;
+        "manageAccounts_cmd": () => string;
     };
     "validation": {
         /**

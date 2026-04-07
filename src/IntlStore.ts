@@ -5,7 +5,7 @@ export interface IntlStore<V = string> {
     [locale: string]: V;
 }
 
-export namespace IntlObject {
+export namespace IntlStore {
 
     export function value<V>(value: IntlStore<V>, locale?: string): V | undefined {
 
