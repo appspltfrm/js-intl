@@ -1,18 +1,21 @@
 {
   "name": "@appspltfrm/js-intl",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "author": "Unipla",
   "type": "module",
   "scripts": {
     "build": "node-utils-file-system-glob-delete \"dist/**/*\" && npm run build:esm",
     "build:esm": "tsc --module esnext --target esnext --moduleResolution bundler --outDir dist/",
     "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --defaultLocale en --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl",
-    "release": "../../releases/release.mjs js-intl"
+    "release": "../../releases/release.mjs js-intl",
+    "i18n:generate": "appspltfrm-i18n-generate i18n",
+    "i18n:translate": "appspltfrm-i18n-translate i18n"
   },
   "bin": {
     "js-intl-google-sheet-importer": "./dist/GoogleSheetImporter/cli.js"
   },
   "dependencies": {
+    "@appspltfrm/i18n": "github:appspltfrm/i18n",
     "@appspltfrm/js-utils": "github:appspltfrm/js-utils",
     "@appspltfrm/node-utils": "github:appspltfrm/node-utils",
     "@fast-csv/parse": "^5.0.0",
@@ -38,15 +41,10 @@
     "typescript": "^5.9.3"
   },
   "exports": {
-    ".": {
-      "types": "./dist/public.d.ts",
-      "import": "./dist/public.js",
-      "monorepo": "./src/public.ts"
-    },
     "./*": {
-      "types": "./dist/*/public.d.ts",
-      "import": "./dist/*/public.js",
-      "monorepo": "./src/*/public.ts"
+      "monorepo": "./src/*",
+      "types": "./dist/*",
+      "import": "./dist/*"
     },
     "./messages/*": {
       "default": "./messages/*"

@@ -6,8 +6,8 @@ export declare abstract class IntlContext {
     addPredefinedFormatOptions<T>(name: string, options: any): void;
     findPredefinedFormatOptions(name: string): any;
     /**
-     * Path or url to a directory, where intl resources are stored.
-     */
+       * Path or url to a directory, where intl resources are stored.
+       */
     resourcesLocation?: string;
     setResourcesLocation(location: string): void;
 }

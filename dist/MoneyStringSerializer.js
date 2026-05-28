@@ -1,4 +1,4 @@
-import { Serializer } from "@appspltfrm/js-utils/json";
+import { Serializer } from "@appspltfrm/js-utils/json/Serializer.js";
 import { Money } from "./Money.js";
 export class MoneyStringSerializer extends Serializer {
     unserialize(json, options) {

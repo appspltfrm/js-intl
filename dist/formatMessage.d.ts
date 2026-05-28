@@ -1,4 +1,4 @@
-import { HtmlString } from "@appspltfrm/js-utils/core";
+import { HtmlString } from "@appspltfrm/js-utils/core/HtmlString.js";
 import { IntlContext } from "./IntlContext.js";
 type MessageType = string | HtmlString;
 export declare function formatMessage<T extends MessageType>(message: T, values: {

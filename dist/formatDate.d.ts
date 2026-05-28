@@ -1,4 +1,6 @@
-import { DateTimezone, Timestamp, TimeZoneDate } from "@appspltfrm/js-utils/core";
+import { DateTimezone } from "@appspltfrm/js-utils/core/DateTimezone.js";
+import type { Timestamp } from "@appspltfrm/js-utils/core/Timestamp.js";
+import { TimeZoneDate } from "@appspltfrm/js-utils/core/TimeZoneDate.js";
 import { IntlContext } from "./IntlContext.js";
 type ValueType = number | Date | DateTimezone | TimeZoneDate | Timestamp;
 type PredefinedOptionsOrOptionsType = string | Intl.DateTimeFormatOptions;

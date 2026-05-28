@@ -1,25 +1,26 @@
-import {SerializationOptions, Serializer} from "@appspltfrm/js-utils/json";
+import type {SerializationOptions} from "@appspltfrm/js-utils/json/SerializationOptions.js";
+import {Serializer} from "@appspltfrm/js-utils/json/Serializer.js";
 import {Country} from "./Country.js";
 
 export class CountryStringSerializer extends Serializer {
 
-    unserialize(json: any, options: SerializationOptions | undefined): any {
+  unserialize(json: any, options: SerializationOptions | undefined): any {
 
-        if (this.isUndefinedOrNull(json)) {
-            return json;
-        }
-
-        return Country.fromJSON(json);
+    if (this.isUndefinedOrNull(json)) {
+      return json;
     }
 
-    serialize(object: any, options?: SerializationOptions): any {
+    return Country.fromJSON(json);
+  }
 
-        if (this.isUndefinedOrNull(object)) {
-            return object;
-        } else if (object instanceof Country) {
-            return object.code;
-        }
+  serialize(object: any, options?: SerializationOptions): any {
 
-        return object.toJSON();
+    if (this.isUndefinedOrNull(object)) {
+      return object;
+    } else if (object instanceof Country) {
+      return object.code;
     }
+
+    return object.toJSON();
+  }
 }

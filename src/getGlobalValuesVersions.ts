@@ -4,9 +4,9 @@ defineGlobals();
 
 export function getGlobalValuesVersions() {
 
-    if (!INTL_VALUES_VERSIONS) {
-        INTL_VALUES_VERSIONS = INTL_MESSAGES_VERSIONS = (INTL_MESSAGES_VERSIONS || {});
-    }
+  if (!INTL_VALUES_VERSIONS) {
+    INTL_VALUES_VERSIONS = INTL_MESSAGES_VERSIONS = (INTL_MESSAGES_VERSIONS || {});
+  }
 
-    return INTL_VALUES_VERSIONS;
+  return INTL_VALUES_VERSIONS;
 }

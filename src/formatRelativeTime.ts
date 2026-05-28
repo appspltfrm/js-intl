@@ -1,4 +1,5 @@
-import {DateTimezone, Timestamp} from "@appspltfrm/js-utils/core";
+import {DateTimezone} from "@appspltfrm/js-utils/core/DateTimezone.js";
+import type {Timestamp} from "@appspltfrm/js-utils/core/Timestamp.js";
 import {bestRelativeTimeFormatValue} from "./bestRelativeTimeFormatValue.js";
 import {defineGlobals} from "./defineGlobals.js";
 import {IntlContext} from "./IntlContext.js";
@@ -13,23 +14,23 @@ export function formatRelativeTime(context: IntlContext, value: ValueType, optio
 
 export function formatRelativeTime() {
 
-    const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
-    const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
-    let value: ValueType = arguments[0 + knownContext];
-    const options: any = arguments[1 + knownContext];
+  const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
+  const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
+  let value: ValueType = arguments[0 + knownContext];
+  const options: any = arguments[1 + knownContext];
 
-    if (typeof value === "number") {
-        value = new Date(value);
-    } else if (value instanceof DateTimezone) {
-        value = value.date;
-    } else if (value && !(value instanceof Date) && typeof value.toDate === "function") {
-        value = value.toDate();
-    }
+  if (typeof value === "number") {
+    value = new Date(value);
+  } else if (value instanceof DateTimezone) {
+    value = value.date;
+  } else if (value && !(value instanceof Date) && typeof value.toDate === "function") {
+    value = value.toDate();
+  }
 
-    if (value === null || value === undefined) {
-        value = new Date();
-    }
+  if (value === null || value === undefined) {
+    value = new Date();
+  }
 
-    const diff = bestRelativeTimeFormatValue(value as Date)!;
-    return new Intl.RelativeTimeFormat(context.locales, Object.assign({numeric: "auto"}, options)).format(diff.value, diff.unit);
+  const diff = bestRelativeTimeFormatValue(value as Date)!;
+  return new Intl.RelativeTimeFormat(context.locales, Object.assign({numeric: "auto"}, options)).format(diff.value, diff.unit);
 }

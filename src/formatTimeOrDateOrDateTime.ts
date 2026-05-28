@@ -1,84 +1,88 @@
-import {DateTimezone, Timestamp, TimeZoneDate, LocalDate, NoTimeDate} from "@appspltfrm/js-utils/core";
+import {DateTimezone} from "@appspltfrm/js-utils/core/DateTimezone.js";
+import {LocalDate} from "@appspltfrm/js-utils/core/LocalDate.js";
+import {NoTimeDate} from "@appspltfrm/js-utils/core/NoTimeDate.js";
+import type {Timestamp} from "@appspltfrm/js-utils/core/Timestamp.js";
+import {TimeZoneDate} from "@appspltfrm/js-utils/core/TimeZoneDate.js";
 import {IntlContext} from "./IntlContext.js";
 
 export function formatTimeOrDateOrDateTime(context: IntlContext, mode: "time" | "date" | "dateTime", dateTime: number | Date | DateTimezone | TimeZoneDate | Timestamp, predefinedOptionsOrOptions?: string | Intl.DateTimeFormatOptions, options?: Intl.DateTimeFormatOptions) {
 
-    let predefinedOptions = typeof predefinedOptionsOrOptions === "string" ? context.findPredefinedFormatOptions(predefinedOptionsOrOptions) : predefinedOptionsOrOptions;
+  let predefinedOptions = typeof predefinedOptionsOrOptions === "string" ? context.findPredefinedFormatOptions(predefinedOptionsOrOptions) : predefinedOptionsOrOptions;
 
-    predefinedOptions = Object.assign({}, predefinedOptions, options);
+  predefinedOptions = Object.assign({}, predefinedOptions, options);
 
-    if (mode === "time") {
+  if (mode === "time") {
 
-        predefinedOptions.year = undefined;
-        predefinedOptions.month = undefined;
-        predefinedOptions.day = undefined;
-        predefinedOptions.weekday = undefined;
-        predefinedOptions.era = undefined;
+    predefinedOptions.year = undefined;
+    predefinedOptions.month = undefined;
+    predefinedOptions.day = undefined;
+    predefinedOptions.weekday = undefined;
+    predefinedOptions.era = undefined;
 
-        if (!predefinedOptions.hour && !predefinedOptions.minute && !predefinedOptions.second && !predefinedOptions.timeZoneName) {
-            predefinedOptions.hour = "2-digit";
-            predefinedOptions.minute = "2-digit";
-            predefinedOptions.second = "2-digit";
-        }
-
-    } else if (mode == "date") {
-
-        predefinedOptions.hour = undefined;
-        predefinedOptions.minute = undefined;
-        predefinedOptions.second = undefined;
-
-        if (!predefinedOptions.year && !predefinedOptions.month && !predefinedOptions.day && !predefinedOptions.weekday && !predefinedOptions.era && !predefinedOptions.timeZoneName) {
-            predefinedOptions.year = "numeric";
-            predefinedOptions.month = "numeric";
-            predefinedOptions.day = "numeric";
-        }
-
-    } else {
-        predefinedOptions = Object.assign({
-            year: "numeric",
-            month: "numeric",
-            day: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit"
-        }, predefinedOptions);
-
+    if (!predefinedOptions.hour && !predefinedOptions.minute && !predefinedOptions.second && !predefinedOptions.timeZoneName) {
+      predefinedOptions.hour = "2-digit";
+      predefinedOptions.minute = "2-digit";
+      predefinedOptions.second = "2-digit";
     }
 
-    if (dateTime instanceof DateTimezone) {
+  } else if (mode == "date") {
 
-        if (!dateTime.timezone) {
-            predefinedOptions.timeZone = "UTC";
-            predefinedOptions.timeZoneName = undefined;
-        } else if (dateTime.timezone !== "current") {
-            predefinedOptions.timeZone = dateTime.timezone;
-        }
+    predefinedOptions.hour = undefined;
+    predefinedOptions.minute = undefined;
+    predefinedOptions.second = undefined;
 
-        dateTime = dateTime.date;
-
-    } else if (dateTime instanceof LocalDate || dateTime instanceof NoTimeDate) {
-        predefinedOptions.timeZone = "UTC";
-        predefinedOptions.timeZoneName = undefined;
-
-    } else if (dateTime instanceof TimeZoneDate) {
-        predefinedOptions.timeZone = dateTime.timeZone !== "current" && dateTime.timeZone ? dateTime.timeZone : undefined;
-        predefinedOptions.timeZoneName = "timeZoneName" in predefinedOptions ? predefinedOptions.timeZoneName : "short";
-
-    } else if (typeof dateTime === "number") {
-        dateTime = new Date(dateTime);
-
-    } else if (dateTime && !(dateTime instanceof Date) && typeof dateTime.toDate === "function") {
-        dateTime = dateTime.toDate();
+    if (!predefinedOptions.year && !predefinedOptions.month && !predefinedOptions.day && !predefinedOptions.weekday && !predefinedOptions.era && !predefinedOptions.timeZoneName) {
+      predefinedOptions.year = "numeric";
+      predefinedOptions.month = "numeric";
+      predefinedOptions.day = "numeric";
     }
 
-    let locale = context.locale;
-    if (typeof navigator !== "undefined" && navigator.language) {
-        if (navigator.language.startsWith(locale)) {
-            locale = navigator.language;
-        } else if (locale === "en" && navigator.language !== "en-US") {
-            locale = "en-GB";
-        }
+  } else {
+    predefinedOptions = Object.assign({
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    }, predefinedOptions);
+
+  }
+
+  if (dateTime instanceof DateTimezone) {
+
+    if (!dateTime.timezone) {
+      predefinedOptions.timeZone = "UTC";
+      predefinedOptions.timeZoneName = undefined;
+    } else if (dateTime.timezone !== "current") {
+      predefinedOptions.timeZone = dateTime.timezone;
     }
 
-    return new Intl.DateTimeFormat(locale, predefinedOptions).format(dateTime as Date);
+    dateTime = dateTime.date;
+
+  } else if (dateTime instanceof LocalDate || dateTime instanceof NoTimeDate) {
+    predefinedOptions.timeZone = "UTC";
+    predefinedOptions.timeZoneName = undefined;
+
+  } else if (dateTime instanceof TimeZoneDate) {
+    predefinedOptions.timeZone = dateTime.timeZone !== "current" && dateTime.timeZone ? dateTime.timeZone : undefined;
+    predefinedOptions.timeZoneName = "timeZoneName" in predefinedOptions ? predefinedOptions.timeZoneName : "short";
+
+  } else if (typeof dateTime === "number") {
+    dateTime = new Date(dateTime);
+
+  } else if (dateTime && !(dateTime instanceof Date) && typeof dateTime.toDate === "function") {
+    dateTime = dateTime.toDate();
+  }
+
+  let locale = context.locale;
+  if (typeof navigator !== "undefined" && navigator.language) {
+    if (navigator.language.startsWith(locale)) {
+      locale = navigator.language;
+    } else if (locale === "en" && navigator.language !== "en-US") {
+      locale = "en-GB";
+    }
+  }
+
+  return new Intl.DateTimeFormat(locale, predefinedOptions).format(dateTime as Date);
 }

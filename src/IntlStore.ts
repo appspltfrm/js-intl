@@ -2,32 +2,32 @@
  * An object, whose keys are locales.
  */
 export interface IntlStore<V = string> {
-    [locale: string]: V;
+  [locale: string]: V;
 }
 
 export namespace IntlStore {
 
-    export function value<V>(value: IntlStore<V>, locale?: string): V | undefined {
+  export function value<V>(value: IntlStore<V>, locale?: string): V | undefined {
 
-        if (value) {
-            return value[locale!];
-        }
-
-        return undefined;
+    if (value) {
+      return value[locale!];
     }
 
-    export function clone<V>(value: IntlStore<V>): IntlStore<V> {
+    return undefined;
+  }
 
-        if (!value) {
-            return value;
-        }
+  export function clone<V>(value: IntlStore<V>): IntlStore<V> {
 
-        let niu: IntlStore<V> = {};
-
-        for (let i in value) {
-            niu[i] = value[i];
-        }
-
-        return niu;
+    if (!value) {
+      return value;
     }
+
+    let niu: IntlStore<V> = {};
+
+    for (let i in value) {
+      niu[i] = value[i];
+    }
+
+    return niu;
+  }
 }

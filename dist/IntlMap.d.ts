@@ -1,4 +1,4 @@
-import { SerializationOptions } from "@appspltfrm/js-utils/json";
+import type { SerializationOptions } from "@appspltfrm/js-utils/json/SerializationOptions.js";
 export declare class IntlMap<Value = any> extends Map<string, Value> {
     readonly defaultLocale: string;
     static readonly jsonTypeName = "@appspltfrm/IntlMap";

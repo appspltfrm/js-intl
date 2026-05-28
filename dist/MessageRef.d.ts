@@ -3,8 +3,8 @@ export declare class MessageRef extends IntlRef {
     static readonly jsonTypeName = "intl/MessageRef";
     static fromJSON(json: any): MessageRef;
     /**
-     * Constructor for a key with default namespace.
-     */
+       * Constructor for a key with default namespace.
+       */
     constructor(key: string, values?: {
         [key: string]: any;
     }, formats?: any);

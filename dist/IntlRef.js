@@ -1,5 +1,5 @@
 import { __decorate, __metadata } from "tslib";
-import { serializable } from "@appspltfrm/js-utils/json";
+import { serializable } from "@appspltfrm/js-utils/json/serializable.js";
 let IntlRef = class IntlRef {
     constructor(type) {
         this.refType = type;

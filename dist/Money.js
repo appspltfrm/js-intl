@@ -63,14 +63,18 @@ export class Money {
         return this.compareTo(money);
     }
     compareTo(money) {
-        if (typeof money === "number")
+        if (typeof money === "number") {
             return this.amount.comparedTo(money);
-        else if (money instanceof BigNumber)
+        }
+        else if (money instanceof BigNumber) {
             return this.amount.comparedTo(money);
-        else if (money)
+        }
+        else if (money) {
             return this.amount.comparedTo(money.amount);
-        else
+        }
+        else {
             throw new Error("Cannot compare empty value");
+        }
     }
     toJSON() {
         return { "@type": Money.jsonTypeName, currency: this.currency.code, amount: this.amount.toString() };

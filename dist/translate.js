@@ -1,4 +1,4 @@
-import { HtmlString } from "@appspltfrm/js-utils/core";
+import { HtmlString } from "@appspltfrm/js-utils/core/HtmlString.js";
 import { IntlMessageFormat } from "intl-messageformat";
 import { DecimalFormatRef } from "./DecimalFormatRef.js";
 import { extractNamespaceAndKey } from "./extractNamespaceAndKey.js";

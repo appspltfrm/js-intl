@@ -15,8 +15,8 @@ export function bestLocale() {
     if (!urlLocale && INTL_LOCALE_MATRIX_PATH && INTL_LOCALE_MATRIX_PARAM) {
     }
     if (!urlLocale) {
-        let queryLocaleMatch = new RegExp('[?&]' + INTL_LOCALE_URL_PARAM + '=([^&]*)').exec(globalThis.location.search);
-        urlLocale = queryLocaleMatch ? decodeURIComponent(queryLocaleMatch[1].replace(/\+/g, ' ')).toLowerCase() : undefined;
+        let queryLocaleMatch = new RegExp("[?&]" + INTL_LOCALE_URL_PARAM + "=([^&]*)").exec(globalThis.location.search);
+        urlLocale = queryLocaleMatch ? decodeURIComponent(queryLocaleMatch[1].replace(/\+/g, " ")).toLowerCase() : undefined;
     }
     if (!urlLocale && INTL_LOCALE_STORAGE_KEY) {
         urlLocale = (globalThis.localStorage && globalThis.localStorage.getItem(INTL_LOCALE_STORAGE_KEY)) || undefined;

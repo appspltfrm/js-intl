@@ -23,12 +23,12 @@ declare global {
         }[];
     };
     /**
-     * @deprecated
-     */
+       * @deprecated
+       */
     let INTL_MESSAGES: any;
     /**
-     * @deprecated
-     */
+       * @deprecated
+       */
     let INTL_MESSAGES_VERSIONS: {
         [namespace: string]: {
             name: string;

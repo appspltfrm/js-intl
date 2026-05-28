@@ -9,64 +9,64 @@ export async function importGlobalValuesFromUrl(context: IntlContext, url: strin
 
 export function importGlobalValuesFromUrl(): Promise<void> {
 
-    const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
-    const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
+  const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
+  const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
 
-    let url: string = arguments[0 + knownContext];
-    if (!url.startsWith("http")) {
-        url = `${context.resourcesLocation}/${url}`;
-    }
+  let url: string = arguments[0 + knownContext];
+  if (!url.startsWith("http")) {
+    url = `${context.resourcesLocation}/${url}`;
+  }
 
-    const values = getGlobalValues();
+  const values = getGlobalValues();
 
-    if (importedResources.indexOf(url) > -1) {
-        return Promise.resolve();
-    }
+  if (importedResources.indexOf(url) > -1) {
+    return Promise.resolve();
+  }
 
-    return new Promise<void>((resolve, reject) => {
+  return new Promise<void>((resolve, reject) => {
 
-        let request = new XMLHttpRequest();
+    let request = new XMLHttpRequest();
 
-        request.onerror = () => {
-            reject(new Error(request.statusText));
-        };
+    request.onerror = () => {
+      reject(new Error(request.statusText));
+    };
 
-        request.onload = () => {
+    request.onload = () => {
 
-            if (request.status >= 200 && request.status < 300) {
-                importedResources.push(url);
+      if (request.status >= 200 && request.status < 300) {
+        importedResources.push(url);
 
-                try {
-                    let json = JSON.parse(request.responseText);
+        try {
+          let json = JSON.parse(request.responseText);
 
-                    if (json) {
-                        for (const namespace in json) {
-                            values[namespace] = values[namespace] || {};
+          if (json) {
+            for (const namespace in json) {
+              values[namespace] = values[namespace] || {};
 
-                            for (const locale in json[namespace] || {}) {
-                                values[namespace][locale] = values[namespace][locale] || {};
+              for (const locale in json[namespace] || {}) {
+                values[namespace][locale] = values[namespace][locale] || {};
 
-                                for (const key in json[namespace][locale] || {}) {
-                                    values[namespace][locale][key] = json[namespace][locale][key];
-                                }
-                            }
-                        }
-                    }
-
-                    resolve();
-
-                } catch (error: any) {
-                    reject(new Error(error));
+                for (const key in json[namespace][locale] || {}) {
+                  values[namespace][locale][key] = json[namespace][locale][key];
                 }
-
-            } else {
-                reject(new Error(request.statusText));
+              }
             }
-        };
+          }
 
-        request.open("GET", url);
-        request.send();
+          resolve();
 
-    });
+        } catch (error: any) {
+          reject(new Error(error));
+        }
+
+      } else {
+        reject(new Error(request.statusText));
+      }
+    };
+
+    request.open("GET", url);
+    request.send();
+
+  });
 
 }

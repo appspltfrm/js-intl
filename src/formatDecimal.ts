@@ -15,16 +15,16 @@ export function formatDecimal(context: IntlContext, value: ValueType, predefined
 
 export function formatDecimal() {
 
-    const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
-    const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
-    const value: ValueType = arguments[0 + knownContext];
-    const predefinedOptions: PredefinedOptionsType = arguments[1 + knownContext];
-    const additionalOptions: Intl.NumberFormatOptions = arguments[2 + knownContext];
+  const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
+  const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
+  const value: ValueType = arguments[0 + knownContext];
+  const predefinedOptions: PredefinedOptionsType = arguments[1 + knownContext];
+  const additionalOptions: Intl.NumberFormatOptions = arguments[2 + knownContext];
 
 
-    if (value instanceof DecimalFormatRef) {
-        return formatNumber(context, "decimal", value.value, value.predefined, value.options);
-    }
+  if (value instanceof DecimalFormatRef) {
+    return formatNumber(context, "decimal", value.value, value.predefined, value.options);
+  }
 
-    return formatNumber(context, "decimal", value, predefinedOptions, additionalOptions);
+  return formatNumber(context, "decimal", value, predefinedOptions, additionalOptions);
 }

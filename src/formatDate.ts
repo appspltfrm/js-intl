@@ -1,4 +1,6 @@
-import {DateTimezone, Timestamp, TimeZoneDate} from "@appspltfrm/js-utils/core";
+import {DateTimezone} from "@appspltfrm/js-utils/core/DateTimezone.js";
+import type {Timestamp} from "@appspltfrm/js-utils/core/Timestamp.js";
+import {TimeZoneDate} from "@appspltfrm/js-utils/core/TimeZoneDate.js";
 import {formatTimeOrDateOrDateTime} from "./formatTimeOrDateOrDateTime.js";
 import {IntlContext} from "./IntlContext.js";
 
@@ -11,11 +13,11 @@ export function formatDate(context: IntlContext, value: ValueType, predefinedOpt
 
 export function formatDate() {
 
-    const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
-    const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
-    const value: ValueType = arguments[0 + knownContext];
-    const predefinedOptionsOrOptions: PredefinedOptionsOrOptionsType = arguments[1 + knownContext];
-    const options: Intl.DateTimeFormatOptions = arguments[2 + knownContext];
+  const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
+  const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
+  const value: ValueType = arguments[0 + knownContext];
+  const predefinedOptionsOrOptions: PredefinedOptionsOrOptionsType = arguments[1 + knownContext];
+  const options: Intl.DateTimeFormatOptions = arguments[2 + knownContext];
 
-    return formatTimeOrDateOrDateTime(context, "date", value, predefinedOptionsOrOptions, options);
+  return formatTimeOrDateOrDateTime(context, "date", value, predefinedOptionsOrOptions, options);
 }

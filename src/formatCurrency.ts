@@ -15,11 +15,11 @@ export function formatCurrency(context: IntlContext, value: ValueType, predefine
 
 export function formatCurrency(): string {
 
-    const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
-    const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
-    const value: ValueType = arguments[0 + knownContext];
-    const predefinedOptions: PredefinedOptionsOrOptionsType = arguments[1 + knownContext];
-    const additionalOptions: Intl.NumberFormatOptions = arguments[2 + knownContext];
+  const knownContext = arguments[0] instanceof IntlContext ? 1 : 0;
+  const context: IntlContext = knownContext ? arguments[0] : INTL_DEFAULT_CONTEXT;
+  const value: ValueType = arguments[0 + knownContext];
+  const predefinedOptions: PredefinedOptionsOrOptionsType = arguments[1 + knownContext];
+  const additionalOptions: Intl.NumberFormatOptions = arguments[2 + knownContext];
 
-    return formatNumber(context, "currency", value, predefinedOptions, additionalOptions);
+  return formatNumber(context, "currency", value, predefinedOptions, additionalOptions);
 }

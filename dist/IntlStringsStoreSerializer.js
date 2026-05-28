@@ -1,4 +1,6 @@
-import { ObjectAsMapSerializer, serialize, unserialize } from "@appspltfrm/js-utils/json";
+import { ObjectAsMapSerializer } from "@appspltfrm/js-utils/json/ObjectAsMapSerializer.js";
+import { serialize } from "@appspltfrm/js-utils/json/serialize.js";
+import { unserialize } from "@appspltfrm/js-utils/json/unserialize.js";
 export class IntlStringsStoreSerializer extends ObjectAsMapSerializer {
     allowPlainValue;
     constructor(allowPlainValue) {

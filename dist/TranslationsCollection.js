@@ -1,5 +1,6 @@
-import { formatMessage, getIntlContext } from "@appspltfrm/js-intl";
-import { HtmlString } from "@appspltfrm/js-utils/core";
+import { HtmlString } from "@appspltfrm/js-utils/core/HtmlString.js";
+import { formatMessage } from "./formatMessage.js";
+import { getIntlContext } from "./getIntlContext.js";
 export var TranslationsCollection;
 (function (TranslationsCollection) {
     class Value {
@@ -20,7 +21,7 @@ export var TranslationsCollection;
         type = "html";
     }
     TranslationsCollection.HtmlValue = HtmlValue;
-    function defineCollection(name, importer) {
+    function defineCollection(importer) {
         const items = {};
         const cache = {};
         const load = async (context) => {
@@ -42,9 +43,9 @@ export var TranslationsCollection;
                 load(useContext);
                 return items[item] = new Proxy({}, {
                     get: (target, p, receiver) => {
-                        const context = useContext ? useContext : getIntlContext();
-                        const value = cache[context.locale]?.[item]?.[p];
                         return (vars, overrideFormats) => {
+                            const context = useContext ? useContext : getIntlContext();
+                            const value = cache[context.locale]?.[item]?.[p];
                             if (typeof value === "string") {
                                 return value;
                             }

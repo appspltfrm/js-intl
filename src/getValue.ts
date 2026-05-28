@@ -7,10 +7,10 @@ import {ValueRef} from "./ValueRef.js";
 
 export function getValue<T extends string | number = string>(context: IntlContext, key: ValueKey | MessageRef | ValueRef): T | undefined {
 
-    const namespaceAndKey = extractNamespaceAndKey(key, context.defaultNamespace);
-    if (!namespaceAndKey.namespace) {
-        return undefined;
-    }
+  const namespaceAndKey = extractNamespaceAndKey(key, context.defaultNamespace);
+  if (!namespaceAndKey.namespace) {
+    return undefined;
+  }
 
-    return getGlobalVersionedValue(context.locales, namespaceAndKey.namespace, namespaceAndKey.key);
+  return getGlobalVersionedValue(context.locales, namespaceAndKey.namespace, namespaceAndKey.key);
 }

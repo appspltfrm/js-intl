@@ -1,10 +1,11 @@
-import {Type} from "@appspltfrm/js-utils/core";
-import {ObjectAsMapSerializer, Serializer} from "@appspltfrm/js-utils/json";
+import {Type} from "@appspltfrm/js-utils/core/Type.js";
+import {ObjectAsMapSerializer} from "@appspltfrm/js-utils/json/ObjectAsMapSerializer.js";
+import {Serializer} from "@appspltfrm/js-utils/json/Serializer.js";
 
 export class IntlStoreSerializer extends ObjectAsMapSerializer {
 
-    constructor(valueType: Type | Serializer) {
-        super(valueType);
-    }
+  constructor(valueType: Type | Serializer) {
+    super(valueType);
+  }
 
 }

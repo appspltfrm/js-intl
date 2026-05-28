@@ -1,4 +1,4 @@
-import { type IntlContext } from "@appspltfrm/js-intl";
+import { IntlContext } from "./IntlContext.js";
 export interface TranslationsCollection<Items extends TranslationsCollection.Items> {
     (): Items["index"];
     <T extends keyof Items>(context: IntlContext): Items["index"];
@@ -27,7 +27,7 @@ export declare namespace TranslationsCollection {
     class HtmlValue extends Value {
         readonly type = "html";
     }
-    function defineCollection<Items extends TranslationsCollection.Items>(name: string, importer: (locale: string) => Promise<{
+    function defineCollection<Items extends TranslationsCollection.Items>(importer: (locale: string) => Promise<{
         [item: string]: {
             [key: string]: any;
         };

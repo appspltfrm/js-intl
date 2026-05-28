@@ -1,4 +1,4 @@
-import { Serializer } from "@appspltfrm/js-utils/json";
+import { Serializer } from "@appspltfrm/js-utils/json/Serializer.js";
 import { Country } from "./Country.js";
 export class CountryStringSerializer extends Serializer {
     unserialize(json, options) {

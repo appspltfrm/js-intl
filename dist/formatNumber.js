@@ -1,9 +1,7 @@
-import { topLevelAwait } from "@appspltfrm/js-utils/core";
 import BigNumber from "bignumber.js";
 import { Currency } from "./Currency.js";
+import { pcsLongFormattedAmount, pcsShortFormattedAmount, ptsLongFormattedAmount, ptsShortFormattedAmount } from "./intlTranslations.currencies.js";
 import { Money } from "./Money.js";
-import translations from "./translations/index.js";
-topLevelAwait(translations.load());
 export function formatNumber(context, mode, value, predefinedOptionsOrOptions, additionalOptions) {
     const options = Object.assign({}, typeof predefinedOptionsOrOptions === "string" ? context.findPredefinedFormatOptions(predefinedOptionsOrOptions) : predefinedOptionsOrOptions, additionalOptions);
     if (mode == "currency") {
@@ -42,7 +40,6 @@ export function formatNumber(context, mode, value, predefinedOptionsOrOptions, a
     }
     const format = new Intl.NumberFormat(context.locales, options);
     if ((options.currency === Currency.PTS || options.currency === Currency.PCS) && options.style === "currency" && options.currencyDisplay && options.currencyDisplay !== "code") {
-        const currenciesTranslations = translations("currencies");
         const currency = options.currency;
         const formats = { number: { decimal: options } };
         const vars = { amount: value };
@@ -50,18 +47,18 @@ export function formatNumber(context, mode, value, predefinedOptionsOrOptions, a
         options.style = "decimal";
         if (currency === Currency.PTS) {
             if (options.currencyDisplay === "name") {
-                return currenciesTranslations.ptsLongFormattedAmount(vars, formats);
+                return ptsLongFormattedAmount(vars, formats);
             }
             else {
-                return currenciesTranslations.ptsShortFormattedAmount(vars, formats);
+                return ptsShortFormattedAmount(vars, formats);
             }
         }
         else {
             if (options.currencyDisplay === "name") {
-                return currenciesTranslations.pcsLongFormattedAmount(vars, formats);
+                return pcsLongFormattedAmount(vars, formats);
             }
             else {
-                return currenciesTranslations.pcsShortFormattedAmount(vars, formats);
+                return pcsShortFormattedAmount(vars, formats);
             }
         }
     }

@@ -1,4 +1,4 @@
-import { Serializer } from "@appspltfrm/js-utils/json";
+import { Serializer } from "@appspltfrm/js-utils/json/Serializer.js";
 import { Locale } from "./Locale.js";
 export class LocaleStringSerializer extends Serializer {
     unserialize(json, options) {

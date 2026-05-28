@@ -1,18 +1,18 @@
-import {serializable} from "@appspltfrm/js-utils/json";
+import {serializable} from "@appspltfrm/js-utils/json/serializable.js";
 
 type RefType = "value" | "message" | "decimalFormat";
 
 @serializable()
 export abstract class IntlRef {
 
-    protected constructor(type: RefType) {
-        this.refType = type;
+  protected constructor(type: RefType) {
+    this.refType = type;
 
-        if (!type) {
-            throw new Error("IntlRef must have type defined");
-        }
+    if (!type) {
+      throw new Error("IntlRef must have type defined");
     }
+  }
 
-    protected readonly refType: RefType;
+  protected readonly refType: RefType;
 
 }

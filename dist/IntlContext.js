@@ -7,8 +7,8 @@ export class IntlContext {
         return this.predefinedFormatOptions[name];
     }
     /**
-     * Path or url to a directory, where intl resources are stored.
-     */
+       * Path or url to a directory, where intl resources are stored.
+       */
     resourcesLocation;
     setResourcesLocation(location) {
         this.resourcesLocation = location;

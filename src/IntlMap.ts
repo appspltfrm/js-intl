@@ -1,4 +1,6 @@
-import {SerializationOptions, serialize, unserialize} from "@appspltfrm/js-utils/json";
+import type {SerializationOptions} from "@appspltfrm/js-utils/json/SerializationOptions.js";
+import {serialize} from "@appspltfrm/js-utils/json/serialize.js";
+import {unserialize} from "@appspltfrm/js-utils/json/unserialize.js";
 
 export class IntlMap<Value = any> extends Map<string, Value> {
 

@@ -1,4 +1,4 @@
-import { HtmlString } from "@appspltfrm/js-utils/core";
+import { HtmlString } from "@appspltfrm/js-utils/core/HtmlString.js";
 import { IntlContext } from "./IntlContext.js";
 import { MessageRef } from "./MessageRef.js";
 import { ValueKey } from "./ValueKey.js";

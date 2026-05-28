@@ -1,4 +1,4 @@
-import { DateTimezone } from "@appspltfrm/js-utils/core";
+import { DateTimezone } from "@appspltfrm/js-utils/core/DateTimezone.js";
 import { bestRelativeTimeFormatValue } from "./bestRelativeTimeFormatValue.js";
 import { defineGlobals } from "./defineGlobals.js";
 import { IntlContext } from "./IntlContext.js";
