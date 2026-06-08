@@ -19,6 +19,7 @@ export default {
     edit_cmd: `Bewerk`,
     error_lbl: `Fout`,
     loadingTheData_ing: `Het laden van de gegevens…`,
+    tryAgain_cmd: `Opnieuw proberen`,
     loading_ing: `Laden…`,
     no_lbl: `Nee`,
     yes_lbl: `Ja`,

@@ -17,6 +17,7 @@ export default {
         edit_cmd: `Uredi`,
         error_lbl: `Napaka`,
         loadingTheData_ing: `Nalaganje podatkov…`,
+        tryAgain_cmd: `Poskusi ponovno`,
         loading_ing: `Nalaganje…`,
         no_lbl: `Ne`,
         yes_lbl: `Da`,

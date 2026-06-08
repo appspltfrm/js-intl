@@ -19,6 +19,7 @@ export default {
     edit_cmd: `Editar`,
     error_lbl: `Error`,
     loadingTheData_ing: `Cargando los datos…`,
+    tryAgain_cmd: `Intentar de nuevo`,
     loading_ing: `Cargando…`,
     no_lbl: `No`,
     yes_lbl: `Sí`,

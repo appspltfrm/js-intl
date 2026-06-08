@@ -19,6 +19,7 @@ export default {
     edit_cmd: `Redigera`,
     error_lbl: `Felayout`,
     loadingTheData_ing: `Laddar data…`,
+    tryAgain_cmd: `Försök igen`,
     loading_ing: `Laddar…`,
     no_lbl: `Nej`,
     yes_lbl: `Ja`,

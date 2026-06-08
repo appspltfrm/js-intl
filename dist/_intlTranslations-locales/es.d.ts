@@ -16,6 +16,7 @@ declare const _default: {
         edit_cmd: string;
         error_lbl: string;
         loadingTheData_ing: string;
+        tryAgain_cmd: string;
         loading_ing: string;
         no_lbl: string;
         yes_lbl: string;

@@ -17,6 +17,7 @@ export default {
         edit_cmd: `Upravit`,
         error_lbl: `Chyba`,
         loadingTheData_ing: `Načítání dat…`,
+        tryAgain_cmd: `Zkusit znovu`,
         loading_ing: `Načítání…`,
         no_lbl: `Ne`,
         yes_lbl: `Ano`,

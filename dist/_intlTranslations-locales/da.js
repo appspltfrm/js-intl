@@ -17,6 +17,7 @@ export default {
         edit_cmd: `Redigér`,
         error_lbl: `Fejl`,
         loadingTheData_ing: `Indlæser data…`,
+        tryAgain_cmd: `Prøv igen`,
         loading_ing: `Indlæser…`,
         no_lbl: `Ingen`,
         yes_lbl: `Ja`,

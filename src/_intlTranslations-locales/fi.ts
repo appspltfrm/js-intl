@@ -19,6 +19,7 @@ export default {
     edit_cmd: `Muokkaa`,
     error_lbl: `Virhe`,
     loadingTheData_ing: `Ladataan tietoja…`,
+    tryAgain_cmd: `Yritä uudelleen`,
     loading_ing: `Ladataan…`,
     no_lbl: `Ei`,
     yes_lbl: `Kyllä`,

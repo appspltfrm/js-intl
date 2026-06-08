@@ -17,6 +17,7 @@ export default {
         edit_cmd: `Editează`,
         error_lbl: `Eroare`,
         loadingTheData_ing: `Se încarcă datele…`,
+        tryAgain_cmd: `Încearcă din nou`,
         loading_ing: `Se încarcă…`,
         no_lbl: `Nu`,
         yes_lbl: `Da`,

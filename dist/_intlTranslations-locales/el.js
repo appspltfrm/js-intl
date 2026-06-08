@@ -17,6 +17,7 @@ export default {
         edit_cmd: `Επεξεργασία`,
         error_lbl: `Σφάλμα`,
         loadingTheData_ing: `Φόρτωση δεδομένων…`,
+        tryAgain_cmd: `Δοκιμάστε ξανά`,
         loading_ing: `Φόρτωση…`,
         no_lbl: `Όχι`,
         yes_lbl: `Ναι`,

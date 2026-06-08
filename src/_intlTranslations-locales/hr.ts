@@ -19,6 +19,7 @@ export default {
     edit_cmd: `Uredi`,
     error_lbl: `Pogreška`,
     loadingTheData_ing: `Učitavanje podataka…`,
+    tryAgain_cmd: `Pokušaj ponovno`,
     loading_ing: `Učitavanje…`,
     no_lbl: `Nema`,
     yes_lbl: `Da`,

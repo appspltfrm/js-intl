@@ -16,6 +16,7 @@ export const {
   edit_cmd,
   error_lbl,
   loadingTheData_ing,
+  tryAgain_cmd,
   loading_ing,
   no_lbl,
   yes_lbl,
@@ -40,6 +41,7 @@ export const {
   edit_cmd(): string;
   error_lbl(): string;
   loadingTheData_ing(): string;
+  tryAgain_cmd(): string;
   loading_ing(): string;
   no_lbl(): string;
   yes_lbl(): string;

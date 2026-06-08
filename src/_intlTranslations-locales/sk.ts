@@ -19,6 +19,7 @@ export default {
     edit_cmd: `Úpravy`,
     error_lbl: `Chyba`,
     loadingTheData_ing: `Načítanie dát…`,
+    tryAgain_cmd: `Skúsiť znova`,
     loading_ing: `Načítava sa…`,
     no_lbl: `Žiadne`,
     yes_lbl: `Áno`,

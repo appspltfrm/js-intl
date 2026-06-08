@@ -19,6 +19,7 @@ export default {
     edit_cmd: `Szerkesztés`,
     error_lbl: `Hiba`,
     loadingTheData_ing: `Adatok betöltése…`,
+    tryAgain_cmd: `Próbálja újra`,
     loading_ing: `Betöltés…`,
     no_lbl: `Nincs`,
     yes_lbl: `Igen`,

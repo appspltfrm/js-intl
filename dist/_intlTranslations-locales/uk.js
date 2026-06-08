@@ -17,6 +17,7 @@ export default {
         edit_cmd: `Редагувати`,
         error_lbl: `Помилка`,
         loadingTheData_ing: `Завантаження даних…`,
+        tryAgain_cmd: `Спробувати ще раз`,
         loading_ing: `Завантаження…`,
         no_lbl: `Ні`,
         yes_lbl: `Так`,
