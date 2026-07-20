@@ -19,7 +19,6 @@ export {Locale} from "./Locale.js";
 export {MessageRef} from "./MessageRef.js";
 export {MoneyStringSerializer} from "./MoneyStringSerializer.js";
 export {Money} from "./Money.js";
-export {TranslationsCollection} from "./TranslationsCollection.js";
 export {ValueRef} from "./ValueRef.js";
 export {bestLocale} from "./bestLocale.js";
 export {currencyLocalizedName} from "./currencyLocalizedName.js";

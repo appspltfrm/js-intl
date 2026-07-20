@@ -1,23 +1,22 @@
 {
   "name": "@appspltfrm/js-intl",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "author": "Unipla",
   "type": "module",
+  "sideEffects": false,
   "scripts": {
     "build": "node-utils-file-system-glob-delete \"dist/**/*\" && npm run build:esm",
     "build:esm": "tsc --module esnext --target esnext --moduleResolution bundler --outDir dist/",
     "messages": "npx tsx src/GoogleSheetImporter/cli.ts --outputPath messages --defaultLocale en --outputType json --document 2PACX-1vR5jv8NqEb7E3wgHZaxjGZVeJaLCZN7F3qm8WkZN2tiCiv9EgYhjCK26LdFbiINdExItbehp_iVmEs9 --filterTags intl",
     "release": "../../releases/release.mjs js-intl",
-    "i18n:generate": "appspltfrm-i18n-generate i18n",
-    "i18n:translate": "appspltfrm-i18n-translate i18n"
+    "i18n:generate": "appspltfrm-i18n-generate src",
+    "i18n:translate": "appspltfrm-i18n-translate src"
   },
   "bin": {
     "js-intl-google-sheet-importer": "./dist/GoogleSheetImporter/cli.js"
   },
   "dependencies": {
-    "@appspltfrm/i18n": "github:appspltfrm/i18n",
     "@appspltfrm/js-utils": "github:appspltfrm/js-utils",
-    "@appspltfrm/node-utils": "github:appspltfrm/node-utils",
     "@fast-csv/parse": "^5.0.0",
     "@formatjs/icu-messageformat-parser": "^2.9.0",
     "@formatjs/intl-relativetimeformat": "^11.0.0",
@@ -33,6 +32,8 @@
     "tslib": "^2.8.0"
   },
   "devDependencies": {
+    "@appspltfrm/i18n": "github:appspltfrm/i18n",
+    "@appspltfrm/node-utils": "github:appspltfrm/node-utils",
     "@types/fs-extra": "^11.0.0",
     "@types/node": "^20.0.0",
     "@types/yargs": "^17.0.0",

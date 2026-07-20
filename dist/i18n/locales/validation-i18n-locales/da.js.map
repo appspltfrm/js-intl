@@ -1,0 +1,1 @@
+{"version":3,"file":"da.js","sourceRoot":"","sources":["../../../../src/i18n/locales/validation-i18n-locales/da.ts"],"names":[],"mappings":"AAAA,sEAAsE;AAEtE,OAAO,EAAC,SAAS,EAAC,MAAM,sBAAsB,CAAC;AAE/C,eAAe;IACb,gBAAgB,EAAE,qBAAqB;IACvC,uBAAuB,EAAE,IAAI,SAAS,CAAC,yIAAyI,EAAE,IAAI,CAAC;IACvL,iBAAiB,EAAE,sBAAsB;IACzC,kBAAkB,EAAE,2GAA2G;CAChI,CAAC"}

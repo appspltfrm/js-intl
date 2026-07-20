@@ -7,7 +7,7 @@ import {
   pcsShortFormattedAmount,
   ptsLongFormattedAmount,
   ptsShortFormattedAmount
-} from "./intlTranslations.currencies.js";
+} from "./currencies.i18n.js";
 import {Money} from "./Money.js";
 
 export type NumberFormatType = "currency" | "percent" | "decimal";

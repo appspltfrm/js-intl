@@ -1,5 +1,0 @@
-locales: all
-name: intlTranslations
-targets:
-  js-intl:
-    path: packages/js-intl/src

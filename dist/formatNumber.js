@@ -1,6 +1,6 @@
 import BigNumber from "bignumber.js";
 import { Currency } from "./Currency.js";
-import { pcsLongFormattedAmount, pcsShortFormattedAmount, ptsLongFormattedAmount, ptsShortFormattedAmount } from "./intlTranslations.currencies.js";
+import { pcsLongFormattedAmount, pcsShortFormattedAmount, ptsLongFormattedAmount, ptsShortFormattedAmount } from "./currencies.i18n.js";
 import { Money } from "./Money.js";
 export function formatNumber(context, mode, value, predefinedOptionsOrOptions, additionalOptions) {
     const options = Object.assign({}, typeof predefinedOptionsOrOptions === "string" ? context.findPredefinedFormatOptions(predefinedOptionsOrOptions) : predefinedOptionsOrOptions, additionalOptions);

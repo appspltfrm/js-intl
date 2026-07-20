@@ -1,0 +1,1 @@
+{"version":3,"file":"sk.js","sourceRoot":"","sources":["../../../../src/i18n/locales/validation-i18n-locales/sk.ts"],"names":[],"mappings":"AAAA,sEAAsE;AAEtE,OAAO,EAAC,SAAS,EAAC,MAAM,sBAAsB,CAAC;AAE/C,eAAe;IACb,gBAAgB,EAAE,2BAA2B;IAC7C,uBAAuB,EAAE,IAAI,SAAS,CAAC,8IAA8I,EAAE,IAAI,CAAC;IAC5L,iBAAiB,EAAE,wBAAwB;IAC3C,kBAAkB,EAAE,kGAAkG;CACvH,CAAC"}

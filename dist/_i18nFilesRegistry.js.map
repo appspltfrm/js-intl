@@ -1,0 +1,1 @@
+{"version":3,"file":"_i18nFilesRegistry.js","sourceRoot":"","sources":["../src/_i18nFilesRegistry.ts"],"names":[],"mappings":"AAEA,MAAM,QAAQ,GAAG,IAAI,GAAG,EAAiB,CAAC;AAE1C,MAAM,UAAU,gBAAgB,CAAC,IAAmB;IAClD,QAAQ,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC;AACrB,CAAC;AAED,MAAM,UAAU,sBAAsB;IACpC,OAAO,QAAQ,CAAC;AAClB,CAAC"}
