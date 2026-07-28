@@ -35,7 +35,7 @@ export interface I18nFile<Keys extends I18nFileKeys = I18nFileKeys> {
 
   readonly keys: Keys;
 
-  load(context?: IntlContext): Promise<this>;
+  load(context?: IntlContext | string): Promise<this>;
 
-  loaded(context?: IntlContext): boolean;
+  loaded(context?: IntlContext | string): boolean;
 }

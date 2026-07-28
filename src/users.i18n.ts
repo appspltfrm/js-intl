@@ -2,6 +2,7 @@
 
 import {topLevelAwait} from "@appspltfrm/js-utils/core/topLevelAwait.js";
 import {defineI18nFile} from "./defineI18nFile.js";
+import type {IntlContext} from "./IntlContext.js";
 
 const importer = async (locale: string) => {
   switch (locale) {
@@ -40,8 +41,13 @@ export const {
   manageAccounts_cmd,
 } = usersI18n.keys as {
   signIn_cmd(): string;
+  signIn_cmd(context: IntlContext): string;
   signOut_cmd(): string;
+  signOut_cmd(context: IntlContext): string;
   switchToThisAccount_cmd(): string;
+  switchToThisAccount_cmd(context: IntlContext): string;
   signInWithAnotherAccount_cmd(): string;
+  signInWithAnotherAccount_cmd(context: IntlContext): string;
   manageAccounts_cmd(): string;
+  manageAccounts_cmd(context: IntlContext): string;
 };

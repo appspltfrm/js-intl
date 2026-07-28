@@ -2,6 +2,7 @@
 
 import {topLevelAwait} from "@appspltfrm/js-utils/core/topLevelAwait.js";
 import {defineI18nFile} from "./defineI18nFile.js";
+import type {IntlContext} from "./IntlContext.js";
 
 const importer = async (locale: string) => {
   switch (locale) {
@@ -42,13 +43,17 @@ export const {
    * komunikat, gdy wartość jest nieprawidłowa
    */
   invalidValue_err(): string;
+  invalidValue_err(context: IntlContext): string;
   /**
    * @param vars.length 
    */
   valueMinCharsLength_err(vars: {length: number}, overrideFormats?: any): string;
+  valueMinCharsLength_err(context: IntlContext, vars: {length: number}, overrideFormats?: any): string;
   requiredValue_err(): string;
+  requiredValue_err(context: IntlContext): string;
   /**
    * Komunikat o błędzie, informujący o niepoprawnie wprowadzonym adresie URL strony www (czyli tylko protokoły http i https)
    */
   invalidHttpUrl_err(): string;
+  invalidHttpUrl_err(context: IntlContext): string;
 };

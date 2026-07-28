@@ -1,2 +1,78 @@
+import type { IntlContext } from "./IntlContext.js";
 export declare const uiI18n: import("./I18nFile.js").I18nFile<import("./I18nFile.js").I18nFileKeys>;
-export declare const apply_cmd: () => string, cancel_cmd: () => string, choose_ptr: () => string, continue_cmd: () => string, delete_ask: () => string, delete_cmd: () => string, edit_cmd: () => string, error_lbl: () => string, loadingTheData_ing: () => string, tryAgain_cmd: () => string, loading_ing: () => string, no_lbl: () => string, yes_lbl: () => string, noDataMatchesSearch: () => string, noDataToDisplay: () => string, ok_lbl: () => string, processingTheData_ing: () => string, redo_cmd: () => string, save_cmd: () => string, done_cmd: () => string, search_cmd: () => string, searchFor_ptr: () => string, sendingTheData_ing: () => string, skip_cmd: () => string, undo_cmd: () => string;
+export declare const apply_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, cancel_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, choose_ptr: {
+    (): string;
+    (context: IntlContext): string;
+}, continue_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, delete_ask: {
+    (): string;
+    (context: IntlContext): string;
+}, delete_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, edit_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, error_lbl: {
+    (): string;
+    (context: IntlContext): string;
+}, loadingTheData_ing: {
+    (): string;
+    (context: IntlContext): string;
+}, tryAgain_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, loading_ing: {
+    (): string;
+    (context: IntlContext): string;
+}, no_lbl: {
+    (): string;
+    (context: IntlContext): string;
+}, yes_lbl: {
+    (): string;
+    (context: IntlContext): string;
+}, noDataMatchesSearch: {
+    (): string;
+    (context: IntlContext): string;
+}, noDataToDisplay: {
+    (): string;
+    (context: IntlContext): string;
+}, ok_lbl: {
+    (): string;
+    (context: IntlContext): string;
+}, processingTheData_ing: {
+    (): string;
+    (context: IntlContext): string;
+}, redo_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, save_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, done_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, search_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, searchFor_ptr: {
+    (): string;
+    (context: IntlContext): string;
+}, sendingTheData_ing: {
+    (): string;
+    (context: IntlContext): string;
+}, skip_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, undo_cmd: {
+    (): string;
+    (context: IntlContext): string;
+};

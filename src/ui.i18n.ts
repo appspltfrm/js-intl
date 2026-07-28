@@ -2,6 +2,7 @@
 
 import {topLevelAwait} from "@appspltfrm/js-utils/core/topLevelAwait.js";
 import {defineI18nFile} from "./defineI18nFile.js";
+import type {IntlContext} from "./IntlContext.js";
 
 const importer = async (locale: string) => {
   switch (locale) {
@@ -60,39 +61,64 @@ export const {
   undo_cmd,
 } = uiI18n.keys as {
   apply_cmd(): string;
+  apply_cmd(context: IntlContext): string;
   cancel_cmd(): string;
+  cancel_cmd(context: IntlContext): string;
   choose_ptr(): string;
+  choose_ptr(context: IntlContext): string;
   continue_cmd(): string;
+  continue_cmd(context: IntlContext): string;
   delete_ask(): string;
+  delete_ask(context: IntlContext): string;
   delete_cmd(): string;
+  delete_cmd(context: IntlContext): string;
   edit_cmd(): string;
+  edit_cmd(context: IntlContext): string;
   error_lbl(): string;
+  error_lbl(context: IntlContext): string;
   loadingTheData_ing(): string;
+  loadingTheData_ing(context: IntlContext): string;
   tryAgain_cmd(): string;
+  tryAgain_cmd(context: IntlContext): string;
   loading_ing(): string;
+  loading_ing(context: IntlContext): string;
   /**
    * Opposite of Yes
    */
   no_lbl(): string;
+  no_lbl(context: IntlContext): string;
   yes_lbl(): string;
+  yes_lbl(context: IntlContext): string;
   noDataMatchesSearch(): string;
+  noDataMatchesSearch(context: IntlContext): string;
   noDataToDisplay(): string;
+  noDataToDisplay(context: IntlContext): string;
   /**
    * Bez względu jaki język, zawsze "OK", głównie do wyświetlania w oknach dialogowych jako
 potwierdzenie lub po prostu przycisk zamykający.
    */
   ok_lbl(): string;
+  ok_lbl(context: IntlContext): string;
   processingTheData_ing(): string;
+  processingTheData_ing(context: IntlContext): string;
   /**
    * Komenda wyświetla w toolbarze edytora/inputu, która pozwala ponowić wycofaną operację.
 Tłumaczenie też ma tylko jedno słowo (o ile język na to pozwala), bez względu czego dotyczy redo/ponowienie.
    */
   redo_cmd(): string;
+  redo_cmd(context: IntlContext): string;
   save_cmd(): string;
+  save_cmd(context: IntlContext): string;
   done_cmd(): string;
+  done_cmd(context: IntlContext): string;
   search_cmd(): string;
+  search_cmd(context: IntlContext): string;
   searchFor_ptr(): string;
+  searchFor_ptr(context: IntlContext): string;
   sendingTheData_ing(): string;
+  sendingTheData_ing(context: IntlContext): string;
   skip_cmd(): string;
+  skip_cmd(context: IntlContext): string;
   undo_cmd(): string;
+  undo_cmd(context: IntlContext): string;
 };

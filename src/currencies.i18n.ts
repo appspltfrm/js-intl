@@ -2,6 +2,7 @@
 
 import {topLevelAwait} from "@appspltfrm/js-utils/core/topLevelAwait.js";
 import {defineI18nFile} from "./defineI18nFile.js";
+import type {IntlContext} from "./IntlContext.js";
 
 const importer = async (locale: string) => {
   switch (locale) {
@@ -42,14 +43,17 @@ export const {
    * @param vars.amount 
    */
   ptsLongFormattedAmount(vars: {amount: number}, overrideFormats?: any): string;
+  ptsLongFormattedAmount(context: IntlContext, vars: {amount: number}, overrideFormats?: any): string;
   /**
    * @param vars.amount 
    */
   ptsShortFormattedAmount(vars: {amount: number}, overrideFormats?: any): string;
+  ptsShortFormattedAmount(context: IntlContext, vars: {amount: number}, overrideFormats?: any): string;
   /**
    * @param vars.amount 
    */
   pcsLongFormattedAmount(vars: {amount: number}, overrideFormats?: any): string;
+  pcsLongFormattedAmount(context: IntlContext, vars: {amount: number}, overrideFormats?: any): string;
   /**
    * Formatowanie liczby sztuk (np. jakiejś rzeczy), ale słowo "sztuka" jest zastąpione
 wersję skróconą, czyli "szt.", chodzi o to, aby było zrozumiałe, ale zajmowało jak najmniej
@@ -58,4 +62,5 @@ miejsca.
    * @param vars.amount 
    */
   pcsShortFormattedAmount(vars: {amount: number}, overrideFormats?: any): string;
+  pcsShortFormattedAmount(context: IntlContext, vars: {amount: number}, overrideFormats?: any): string;
 };

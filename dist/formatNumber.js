@@ -47,18 +47,18 @@ export function formatNumber(context, mode, value, predefinedOptionsOrOptions, a
         options.style = "decimal";
         if (currency === Currency.PTS) {
             if (options.currencyDisplay === "name") {
-                return ptsLongFormattedAmount(vars, formats);
+                return ptsLongFormattedAmount(context, vars, formats);
             }
             else {
-                return ptsShortFormattedAmount(vars, formats);
+                return ptsShortFormattedAmount(context, vars, formats);
             }
         }
         else {
             if (options.currencyDisplay === "name") {
-                return pcsLongFormattedAmount(vars, formats);
+                return pcsLongFormattedAmount(context, vars, formats);
             }
             else {
-                return pcsShortFormattedAmount(vars, formats);
+                return pcsShortFormattedAmount(context, vars, formats);
             }
         }
     }

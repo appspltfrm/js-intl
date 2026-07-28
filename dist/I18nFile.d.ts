@@ -29,6 +29,6 @@ export type I18nFileImporter = (locale: string) => Promise<I18nFileData>;
  */
 export interface I18nFile<Keys extends I18nFileKeys = I18nFileKeys> {
     readonly keys: Keys;
-    load(context?: IntlContext): Promise<this>;
-    loaded(context?: IntlContext): boolean;
+    load(context?: IntlContext | string): Promise<this>;
+    loaded(context?: IntlContext | string): boolean;
 }
