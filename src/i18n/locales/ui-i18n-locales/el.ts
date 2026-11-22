@@ -2,7 +2,9 @@
 
 export default {
   apply_cmd: `Εφαρμογή`,
+  back_cmd: `Πίσω`,
   cancel_cmd: `Ακύρωση`,
+  close_cmd: `Κλείσιμο`,
   choose_ptr: `Επιλέξτε…`,
   continue_cmd: `Συνέχεια`,
   delete_ask: `Διαγραφή;`,
@@ -26,4 +28,6 @@ export default {
   sendingTheData_ing: `Αποστολή των δεδομένων…`,
   skip_cmd: `Παράλειψη`,
   undo_cmd: `Αναίρεση`,
+  more_cmd: `Περισσότερα`,
+  duplicate_cmd: `Διπλότυπο`,
 };

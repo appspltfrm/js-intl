@@ -2,7 +2,9 @@
 
 export default {
   apply_cmd: `Alkalmazás`,
+  back_cmd: `Vissza`,
   cancel_cmd: `Mégsem`,
+  close_cmd: `Bezárás`,
   choose_ptr: `Válasszon…`,
   continue_cmd: `Folytasd`,
   delete_ask: `Törlés?`,
@@ -26,4 +28,6 @@ export default {
   sendingTheData_ing: `Adatok küldése…`,
   skip_cmd: `Kihagyás`,
   undo_cmd: `Vissza`,
+  more_cmd: `Több`,
+  duplicate_cmd: `Duplikálás`,
 };

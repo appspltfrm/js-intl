@@ -2,7 +2,9 @@
 
 export default {
   apply_cmd: `Anvend`,
+  back_cmd: `Tilbage`,
   cancel_cmd: `Annullér`,
+  close_cmd: `Luk`,
   choose_ptr: `Vælg…`,
   continue_cmd: `Fortsæt`,
   delete_ask: `Slet?`,
@@ -26,4 +28,6 @@ export default {
   sendingTheData_ing: `Sender dataene…`,
   skip_cmd: `Overspring`,
   undo_cmd: `Fortryd`,
+  more_cmd: `Mere`,
+  duplicate_cmd: `Dupliker`,
 };

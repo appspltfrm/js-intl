@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Aplicar`,
+    back_cmd: `Voltar`,
     cancel_cmd: `Cancelar`,
+    close_cmd: `Fechar`,
     choose_ptr: `Escolha…`,
     continue_cmd: `Continuar`,
     delete_ask: `Excluir?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Enviando os dados…`,
     skip_cmd: `Pular`,
     undo_cmd: `Desfazer`,
+    more_cmd: `Mais`,
+    duplicate_cmd: `Duplicar`,
 };
 //# sourceMappingURL=pt.js.map

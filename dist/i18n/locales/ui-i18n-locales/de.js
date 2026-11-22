@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Bewerben`,
+    back_cmd: `Zurück`,
     cancel_cmd: `Abbrechen`,
+    close_cmd: `Schließen`,
     choose_ptr: `Wählen…`,
     continue_cmd: `Weitermachen`,
     delete_ask: `Löschen?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Sending the data…`,
     skip_cmd: `Überspringen`,
     undo_cmd: `Rückgängig machen`,
+    more_cmd: `Mehr`,
+    duplicate_cmd: `Duplizieren`,
 };
 //# sourceMappingURL=de.js.map

@@ -2,7 +2,9 @@
 
 export default {
   apply_cmd: `Застосувати`,
+  back_cmd: `Назад`,
   cancel_cmd: `Скасувати`,
+  close_cmd: `Закрити`,
   choose_ptr: `Виберіть…`,
   continue_cmd: `Продовжити`,
   delete_ask: `Видалити?`,
@@ -26,4 +28,6 @@ export default {
   sendingTheData_ing: `Надсилання даних…`,
   skip_cmd: `Пропустити`,
   undo_cmd: `Скасувати`,
+  more_cmd: `Більше`,
+  duplicate_cmd: `Дублювати`,
 };

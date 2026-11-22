@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Uporabi`,
+    back_cmd: `Nazaj`,
     cancel_cmd: `Prekliči`,
+    close_cmd: `Zapri`,
     choose_ptr: `Izberi…`,
     continue_cmd: `Nadal`,
     delete_ask: `Brisanje?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Pošiljanje podatkov…`,
     skip_cmd: `Preskoči`,
     undo_cmd: `Razvelj`,
+    more_cmd: `Več`,
+    duplicate_cmd: `Podvoji`,
 };
 //# sourceMappingURL=sl.js.map

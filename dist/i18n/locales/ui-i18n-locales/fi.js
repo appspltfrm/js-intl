@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Käytä`,
+    back_cmd: `Takaisin`,
     cancel_cmd: `Peruuta`,
+    close_cmd: `Sulje`,
     choose_ptr: `Valitse…`,
     continue_cmd: `Jatka`,
     delete_ask: `Poistetaan?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Lähetetään tietoja…`,
     skip_cmd: `Ohita`,
     undo_cmd: `Kumoa`,
+    more_cmd: `Lisää`,
+    duplicate_cmd: `Monista`,
 };
 //# sourceMappingURL=fi.js.map

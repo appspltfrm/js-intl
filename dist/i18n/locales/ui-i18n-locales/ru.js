@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Применить`,
+    back_cmd: `Назад`,
     cancel_cmd: `Отмена`,
+    close_cmd: `Закрыть`,
     choose_ptr: `Выберите…`,
     continue_cmd: `Продолжить`,
     delete_ask: `Удалить?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Отправка данных…`,
     skip_cmd: `Пропустить`,
     undo_cmd: `Отменить`,
+    more_cmd: `Ещё`,
+    duplicate_cmd: `Дублировать`,
 };
 //# sourceMappingURL=ru.js.map

@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Primijeni`,
+    back_cmd: `Natrag`,
     cancel_cmd: `Odustani`,
+    close_cmd: `Zatvori`,
     choose_ptr: `Odaberi…`,
     continue_cmd: `Nastaviți`,
     delete_ask: `Brisanje?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Slanje podataka…`,
     skip_cmd: `Preskoči`,
     undo_cmd: `Undo`,
+    more_cmd: `Više`,
+    duplicate_cmd: `Dupliciraj`,
 };
 //# sourceMappingURL=hr.js.map

@@ -2,7 +2,9 @@
 
 export default {
   apply_cmd: `Toepassen`,
+  back_cmd: `Terug`,
   cancel_cmd: `Annuleer`,
+  close_cmd: `Sluiten`,
   choose_ptr: `Kies op...`,
   continue_cmd: `Doorgaan`,
   delete_ask: `Verwijderen?`,
@@ -26,4 +28,6 @@ export default {
   sendingTheData_ing: `Verzend de gegevens…`,
   skip_cmd: `Overslaan`,
   undo_cmd: `Ongedaan maken`,
+  more_cmd: `Meer`,
+  duplicate_cmd: `Dupliceren`,
 };

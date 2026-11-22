@@ -11,15 +11,18 @@ export function formatTimeOrDateOrDateTime(context: IntlContext, mode: "time" | 
 
   predefinedOptions = Object.assign({}, predefinedOptions, options);
 
+  // `dateStyle`/`timeStyle` can't be combined with the individual date-time component options
+  // (`Intl.DateTimeFormat` throws), so the component defaults apply only without a style.
   if (mode === "time") {
 
+    predefinedOptions.dateStyle = undefined;
     predefinedOptions.year = undefined;
     predefinedOptions.month = undefined;
     predefinedOptions.day = undefined;
     predefinedOptions.weekday = undefined;
     predefinedOptions.era = undefined;
 
-    if (!predefinedOptions.hour && !predefinedOptions.minute && !predefinedOptions.second && !predefinedOptions.timeZoneName) {
+    if (!predefinedOptions.timeStyle && !predefinedOptions.hour && !predefinedOptions.minute && !predefinedOptions.second && !predefinedOptions.timeZoneName) {
       predefinedOptions.hour = "2-digit";
       predefinedOptions.minute = "2-digit";
       predefinedOptions.second = "2-digit";
@@ -27,15 +30,21 @@ export function formatTimeOrDateOrDateTime(context: IntlContext, mode: "time" | 
 
   } else if (mode == "date") {
 
+    predefinedOptions.timeStyle = undefined;
     predefinedOptions.hour = undefined;
     predefinedOptions.minute = undefined;
     predefinedOptions.second = undefined;
 
-    if (!predefinedOptions.year && !predefinedOptions.month && !predefinedOptions.day && !predefinedOptions.weekday && !predefinedOptions.era && !predefinedOptions.timeZoneName) {
+    if (!predefinedOptions.dateStyle && !predefinedOptions.year && !predefinedOptions.month && !predefinedOptions.day && !predefinedOptions.weekday && !predefinedOptions.era && !predefinedOptions.timeZoneName) {
       predefinedOptions.year = "numeric";
       predefinedOptions.month = "numeric";
       predefinedOptions.day = "numeric";
     }
+
+  } else if (predefinedOptions.dateStyle || predefinedOptions.timeStyle) {
+    // a date-time needs both parts: the missing style defaults to "short"
+    predefinedOptions.dateStyle ??= "short";
+    predefinedOptions.timeStyle ??= "short";
 
   } else {
     predefinedOptions = Object.assign({
@@ -66,7 +75,7 @@ export function formatTimeOrDateOrDateTime(context: IntlContext, mode: "time" | 
 
   } else if (dateTime instanceof TimeZoneDate) {
     predefinedOptions.timeZone = dateTime.timeZone !== "current" && dateTime.timeZone ? dateTime.timeZone : undefined;
-    predefinedOptions.timeZoneName = "timeZoneName" in predefinedOptions ? predefinedOptions.timeZoneName : "short";
+    predefinedOptions.timeZoneName = "timeZoneName" in predefinedOptions || predefinedOptions.dateStyle || predefinedOptions.timeStyle ? predefinedOptions.timeZoneName : "short";
 
   } else if (typeof dateTime === "number") {
     dateTime = new Date(dateTime);

@@ -1,6 +1,8 @@
 declare const _default: {
     apply_cmd: string;
+    back_cmd: string;
     cancel_cmd: string;
+    close_cmd: string;
     choose_ptr: string;
     continue_cmd: string;
     delete_ask: string;
@@ -24,5 +26,7 @@ declare const _default: {
     sendingTheData_ing: string;
     skip_cmd: string;
     undo_cmd: string;
+    more_cmd: string;
+    duplicate_cmd: string;
 };
 export default _default;

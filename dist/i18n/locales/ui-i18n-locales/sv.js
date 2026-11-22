@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Ansök`,
+    back_cmd: `Tillbaka`,
     cancel_cmd: `Avbryt`,
+    close_cmd: `Stäng`,
     choose_ptr: `Välj…`,
     continue_cmd: `Fortsätt`,
     delete_ask: `Ta bort?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Skickar data…`,
     skip_cmd: `Hoppa över`,
     undo_cmd: `Ångra`,
+    more_cmd: `Mer`,
+    duplicate_cmd: `Duplicera`,
 };
 //# sourceMappingURL=sv.js.map

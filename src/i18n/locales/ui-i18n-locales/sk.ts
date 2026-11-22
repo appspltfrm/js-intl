@@ -2,7 +2,9 @@
 
 export default {
   apply_cmd: `Použiť`,
+  back_cmd: `Späť`,
   cancel_cmd: `Zrušiť`,
+  close_cmd: `Zavrieť`,
   choose_ptr: `Vybrať…`,
   continue_cmd: `Pokračovať`,
   delete_ask: `Vymazať?`,
@@ -26,4 +28,6 @@ export default {
   sendingTheData_ing: `Odosielanie dát…`,
   skip_cmd: `Preskočiť`,
   undo_cmd: `Vrátiť späť`,
+  more_cmd: `Viac`,
+  duplicate_cmd: `Duplikovať`,
 };

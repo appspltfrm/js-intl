@@ -2,7 +2,9 @@
 
 export default {
   apply_cmd: `Appliquer`,
+  back_cmd: `Retour`,
   cancel_cmd: `Annuler`,
+  close_cmd: `Fermer`,
   choose_ptr: `Choisissez…`,
   continue_cmd: `Poursuivre`,
   delete_ask: `Supprimer ?`,
@@ -26,4 +28,6 @@ export default {
   sendingTheData_ing: `Envoi des données…`,
   skip_cmd: `Ignorer`,
   undo_cmd: `Annuler`,
+  more_cmd: `Plus`,
+  duplicate_cmd: `Dupliquer`,
 };

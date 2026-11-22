@@ -3,7 +3,13 @@ export declare const uiI18n: import("./I18nFile.js").I18nFile<import("./I18nFile
 export declare const apply_cmd: {
     (): string;
     (context: IntlContext): string;
+}, back_cmd: {
+    (): string;
+    (context: IntlContext): string;
 }, cancel_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, close_cmd: {
     (): string;
     (context: IntlContext): string;
 }, choose_ptr: {
@@ -73,6 +79,12 @@ export declare const apply_cmd: {
     (): string;
     (context: IntlContext): string;
 }, undo_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, more_cmd: {
+    (): string;
+    (context: IntlContext): string;
+}, duplicate_cmd: {
     (): string;
     (context: IntlContext): string;
 };

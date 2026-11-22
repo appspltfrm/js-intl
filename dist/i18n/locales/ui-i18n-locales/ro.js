@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Aplică`,
+    back_cmd: `Înapoi`,
     cancel_cmd: `Anulează`,
+    close_cmd: `Închide`,
     choose_ptr: `Alegeți…`,
     continue_cmd: `Continuă`,
     delete_ask: `Ștergeți?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Trimiterea datelor…`,
     skip_cmd: `Sari`,
     undo_cmd: `Anulare`,
+    more_cmd: `Mai mult`,
+    duplicate_cmd: `Dublează`,
 };
 //# sourceMappingURL=ro.js.map

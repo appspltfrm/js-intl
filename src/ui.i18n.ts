@@ -35,7 +35,9 @@ topLevelAwait(uiI18n.load());
 
 export const {
   apply_cmd,
+  back_cmd,
   cancel_cmd,
+  close_cmd,
   choose_ptr,
   continue_cmd,
   delete_ask,
@@ -59,11 +61,23 @@ export const {
   sendingTheData_ing,
   skip_cmd,
   undo_cmd,
+  more_cmd,
+  duplicate_cmd,
 } = uiI18n.keys as {
   apply_cmd(): string;
   apply_cmd(context: IntlContext): string;
+  /**
+   * Leaves a step pushed onto a dialog and returns to the previous page
+   */
+  back_cmd(): string;
+  back_cmd(context: IntlContext): string;
   cancel_cmd(): string;
   cancel_cmd(context: IntlContext): string;
+  /**
+   * Closes a dialog without doing anything
+   */
+  close_cmd(): string;
+  close_cmd(context: IntlContext): string;
   choose_ptr(): string;
   choose_ptr(context: IntlContext): string;
   continue_cmd(): string;
@@ -121,4 +135,14 @@ Tłumaczenie też ma tylko jedno słowo (o ile język na to pozwala), bez wzglę
   skip_cmd(context: IntlContext): string;
   undo_cmd(): string;
   undo_cmd(context: IntlContext): string;
+  /**
+   * Button opening a menu of further actions (e.g. in a page toolbar)
+   */
+  more_cmd(): string;
+  more_cmd(context: IntlContext): string;
+  /**
+   * Command creating a copy of the item (a record, a page, a data sheet)
+   */
+  duplicate_cmd(): string;
+  duplicate_cmd(context: IntlContext): string;
 };

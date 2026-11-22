@@ -1,7 +1,9 @@
 // AUTO-GENERATED — do not edit. Source: ../../../ui.i18n.html
 export default {
     apply_cmd: `Použít`,
+    back_cmd: `Zpět`,
     cancel_cmd: `Zrušit`,
+    close_cmd: `Zavřít`,
     choose_ptr: `Vyberte…`,
     continue_cmd: `Pokračovat`,
     delete_ask: `Smazat?`,
@@ -25,5 +27,7 @@ export default {
     sendingTheData_ing: `Odesílání dat…`,
     skip_cmd: `Přeskočit`,
     undo_cmd: `Zpět`,
+    more_cmd: `Více`,
+    duplicate_cmd: `Duplikovat`,
 };
 //# sourceMappingURL=cs.js.map
